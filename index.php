@@ -88,7 +88,7 @@
 				}
 				echo count($allfriends);
 				foreach ($allFriends as $key) {
-					echo $key['name'],$key['key'] . "<br>";
+					echo $key['name'],$key['id'] . "<br>";
 				}
 				echo count($allfriends);
 			} else {

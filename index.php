@@ -84,8 +84,8 @@
 				while ($friends = $fb->next($friends)) {
 					$friendsArray = $friends->asArray();
 					$allFriends = array_merge($friendsArray, $allFriends);
+					echo sizeof($allfriends);
 				}
-				echo sizeof($allfriends);
 				foreach ($allFriends as $key) {
 					echo $key['name'] . "<br>";
 				}

@@ -9,7 +9,7 @@
 		  'default_graph_version' => 'v2.5',
 		]);
 		$helper = $fb->getCanvasHelper();
-		$permissions = ['email','publish_actions']; // optionnal
+		$permissions = ['email','publish_actions','user_friends']; // optionnal
 		try {
 			if (isset($_SESSION['facebook_access_token'])) {
 			$accessToken = $_SESSION['facebook_access_token'];

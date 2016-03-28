@@ -56,13 +56,13 @@
 			}
 			// getting basic info about user
 			try {
-				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location);
+				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location');
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
 				$request_friends = $fb->get('/me/taggable_friends?fields=name&limit=100');
 				$friends = $request_friends->getGraphEdge();
 
-				$post_message = ['link' => 'https://apps.facebook.com/getting_meaty/'];
+				$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
 				$post_request = $fb->post('/me/feed', $post_message);
 
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
@@ -89,6 +89,7 @@
 				foreach ($allFriends as $key) {
 					echo $key['name'] . "<br>";
 				}
+				echo sizeof($allfriends);
 			} else {
 				$allFriends = $friends->asArray();
 				$totalFriends = count($allFriends);
@@ -96,7 +97,7 @@
 					echo $key['name'] . "<br>";
 				}
 			}
-			echo sizeof($allfriends);
+			
 
 			// priting basic info about user on the screen
 			print_r($profile_response);

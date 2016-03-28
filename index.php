@@ -62,7 +62,7 @@
 				$request_friends = $fb->get('/me/taggable_friends?fields=name&limit=100');
 				$friends = $request_friends->getGraphEdge();
 
-				$post_message = ['link' => 'https://apps.facebook.com/getting_meaty/'];
+				$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
 				$post_request = $fb->post('/me/feed', $post_message);
 
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
@@ -89,14 +89,16 @@
 				foreach ($allFriends as $key) {
 					echo $key['name'] . "<br>";
 				}
+				echo count($allfriends);
 			} else {
 				$allFriends = $friends->asArray();
 				$totalFriends = count($allFriends);
 				foreach ($allFriends as $key) {
 					echo $key['name'] . "<br>";
 				}
+				echo $totalFriends;
 			}
-			echo sizeof($allfriends);
+			
 
 			// priting basic info about user on the screen
 			print_r($profile_response);

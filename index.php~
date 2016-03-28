@@ -1,5 +1,5 @@
 <html>
-	<body>
+	<body background= img/me.jpg>
 		<?php
 		session_start();
 		require_once __DIR__ . '/src/Facebook/autoload.php';
@@ -69,7 +69,7 @@
 				// When Graph returns an error
 				echo 'Graph returned an error: ' . $e->getMessage();
 				unset($_SESSION['facebook_access_token']);
-				echo "<script>window.top.location.href='https://apps.facebook.com/getting_meaty/'</script>";
+				echo "<script>window.top.location.href='https://apps.facebook.com/'</script>";
 				exit;
 			} catch(Facebook\Exceptions\FacebookSDKException $e) {
 				// When validation fails or other local issues
@@ -77,26 +77,18 @@
 				exit;
 			}
 
-			// if have more friends than 100 as we defined the limit above on line no. 68
+			//As the page of friends hasa maximumthis methods gets all the friends in the same array
 			if ($fb->next($friends)) {
 				$allFriends = array();
 				$friendsArray = $friends->asArray();
 				while ($friends = $fb->next($friends)) {
 					$friendsArray = $friends->asArray();
 					$allFriends = array_merge($friendsArray, $allFriends);
-					echo sizeof($allfriends);
 				}
-				foreach ($allFriends as $key) {
-					echo $key['name'] . "<br>";
-				}
-				echo count($allfriends);
+				echo count($allFriends);
+				
 			} else {
 				$allFriends = $friends->asArray();
-				$totalFriends = count($allFriends);
-				foreach ($allFriends as $key) {
-					echo $key['name'] . "<br>";
-				}
-				print_r($totalFriends);
 			}
 			
 

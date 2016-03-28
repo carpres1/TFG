@@ -60,7 +60,7 @@
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
 				$request_friends = $fb->get('/me/taggable_friends?fields=name&limit=100');
-				$response_friends = $request_friends->getGraphEdge();
+				$friends = $request_friends->getGraphEdge();
 
 				$post_message = ['link' => 'https://apps.facebook.com/getting_meaty/'];
 				$post_request = $fb->post('/me/feed', $post_message);
@@ -77,25 +77,26 @@
 				exit;
 			}
 
-				if ($fb->next($response_friends)) {
-					$allFriends = array();
-					$friendsArray = $response_friends->asArray();
+			// if have more friends than 100 as we defined the limit above on line no. 68
+			if ($fb->next($friends)) {
+				$allFriends = array();
+				$friendsArray = $friends->asArray();
+				$allFriends = array_merge($friendsArray, $allFriends);
+				while ($friends = $fb->next($friends)) {
+					$friendsArray = $friends->asArray();
 					$allFriends = array_merge($friendsArray, $allFriends);
-					while ($friends = $fb->next($response_friends)) {
-						$friendsArray = $fresponse_friends->asArray();
-						$allFriends = array_merge($friendsArray, $allFriends);
-					}
-					foreach ($allFriends as $key) {
-						echo $key['name'] . "<br>";
-					}
-					echo count($allfriends);
-				} else {
-					$allFriends = $response_friends->asArray();
-					$totalFriends = count($allFriends);
-					foreach ($allFriends as $key) {
-						echo $key['name'] . "<br>";
-					}
 				}
+				foreach ($allFriends as $key) {
+					echo $key['name'] . "<br>";
+				}
+				echo count($allfriends);
+			} else {
+				$allFriends = $friends->asArray();
+				$totalFriends = count($allFriends);
+				foreach ($allFriends as $key) {
+					echo $key['name'] . "<br>";
+				}
+			}
 
 			// priting basic info about user on the screen
 			print_r($profile_response);

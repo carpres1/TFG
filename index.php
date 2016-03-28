@@ -85,11 +85,11 @@
 					$friendsArray = $friends->asArray();
 					$allFriends = array_merge($friendsArray, $allFriends);
 				}
-				echo count($allFriends);
 				
 			} else {
 				$allFriends = $friends->asArray();
 			}
+			echo count($allFriends);
 			
 
 			// priting basic info about user on the screen

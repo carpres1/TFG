@@ -60,7 +60,7 @@
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
 				$request_friends = $fb->get('/me/friends');
-				$friends = $request_friends->getGraphObject()->asArray();
+				$friends = $request_friends->getGraphEdge()->asArray();
 
 				$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
 				$post_request = $fb->post('/me/feed', $post_message);

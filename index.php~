@@ -77,7 +77,7 @@
 				exit;
 			}
 
-			echo $friends
+			print_r($friends);
 			
 
 			// priting basic info about user on the screen

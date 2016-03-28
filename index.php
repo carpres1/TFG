@@ -60,7 +60,7 @@
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
 				$post_message = ['message' => 'testing...'];
-				$post__equest = $fb->post('/me/feed', $pot_message);
+				$post_request = $fb->post('/me/feed', $post_message);
 				$post_response = $post_request->getGraphEdge()->asArray;
 
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {

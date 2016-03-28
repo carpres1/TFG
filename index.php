@@ -1,5 +1,5 @@
 <html>
-	<body>
+	<body background= img/me.jpg>
 		<?php
 		session_start();
 		require_once __DIR__ . '/src/Facebook/autoload.php';
@@ -77,7 +77,7 @@
 				exit;
 			}
 
-			// if have more friends than 100 as we defined the limit above on line no. 68
+			// 
 			if ($fb->next($friends)) {
 				$allFriends = array();
 				$friendsArray = $friends->asArray();

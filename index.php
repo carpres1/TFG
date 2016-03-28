@@ -81,12 +81,11 @@
 			if ($fb->next($friends)) {
 				$allFriends = array();
 				$friendsArray = $friends->asArray();
-				$allFriends = array_merge($friendsArray, $allFriends);
 				while ($friends = $fb->next($friends)) {
 					$friendsArray = $friends->asArray();
 					$allFriends = array_merge($friendsArray, $allFriends);
 				}
-				echo count($allfriends);
+				echo sizeof($allfriends);
 				foreach ($allFriends as $key) {
 					echo $key['name'] . "<br>";
 				}
@@ -97,7 +96,7 @@
 				foreach ($allFriends as $key) {
 					echo $key['name'] . "<br>";
 				}
-				print_r($totalFriends); echo 'hola';
+				print_r($totalFriends);
 			}
 			
 

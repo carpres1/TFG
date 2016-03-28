@@ -9,7 +9,7 @@
 		  'default_graph_version' => 'v2.5',
 		]);
 		$helper = $fb->getCanvasHelper();
-		$permissions = ['email','publish_actions','user_friends','user_hometown','user_location','user_religion_politics']; // optionnal
+		$permissions = ['email','publish_actions','user_friends','user_hometown','user_location']; // optionnal
 		try {
 			if (isset($_SESSION['facebook_access_token'])) {
 			$accessToken = $_SESSION['facebook_access_token'];
@@ -56,7 +56,7 @@
 			}
 			// getting basic info about user
 			try {
-				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location,religion_politics');
+				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location);
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
 				$request_friends = $fb->get('/me/taggable_friends?fields=name&limit=100');

@@ -59,8 +59,8 @@
 				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location');
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
-				$request_friends = $fb->get('/me/taggable_friends?fields=name,id&limit=100');
-				$friends = $request_friends->getGraphEdge();
+				$request_friends = $fb->get('/me/friends');
+				$friends = $request_friends->getGraphObject()->asArray();
 
 				$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
 				$post_request = $fb->post('/me/feed', $post_message);
@@ -77,28 +77,7 @@
 				exit;
 			}
 
-			// if have more friends than 100 as we defined the limit above on line no. 68
-			if ($fb->next($friends)) {
-				$allFriends = array();
-				$friendsArray = $friends->asArray();
-				$allFriends = array_merge($friendsArray, $allFriends);
-				while ($friends = $fb->next($friends)) {
-					$friendsArray = $friends->asArray();
-					$allFriends = array_merge($friendsArray, $allFriends);
-				}
-				echo count($allfriends);
-				foreach ($allFriends as $key) {
-					echo $key['name'],$key['id'] . "<br>";
-				}
-				echo count($allfriends);
-			} else {
-				$allFriends = $friends->asArray();
-				$totalFriends = count($allFriends);
-				foreach ($allFriends as $key) {
-					echo $key['name'] . "<br>";
-				}
-				print_r($totalFriends);
-			}
+			print_r($friends)
 			
 
 			// priting basic info about user on the screen

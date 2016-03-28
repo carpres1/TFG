@@ -59,9 +59,8 @@
 				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender');
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
-				$post_message = ['message' => 'testing...'];
+				$post_message = ['link' => 'https://apps.facebook.com/getting_meaty/'];
 				$post_request = $fb->post('/me/feed', $post_message);
-				$post_response = $post_request->getGraphEdge()->asArray;
 
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
 				// When Graph returns an error

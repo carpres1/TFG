@@ -59,8 +59,8 @@
 				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location');
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
-				$request_friends = $fb->get('/me/friends');
-				$friends = $request_friends->getGraphEdge()->asArray();
+				$request_friends = $fb->get('/me/friends?&limit=0');
+				
 
 				$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
 				$post_request = $fb->post('/me/feed', $post_message);
@@ -77,8 +77,12 @@
 				exit;
 			}
 
+			// if have more friends than 100 as we defined the limit above on line no. 68
+			$friends =array();
+			foreach($request_friends as $index =>$friend):
+				$friends[]=$friend['id'];
+			endforeach;
 			print_r($friends);
-			
 
 			// priting basic info about user on the screen
 			print_r($profile_response);

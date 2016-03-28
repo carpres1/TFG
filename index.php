@@ -9,7 +9,7 @@
 		  'default_graph_version' => 'v2.5',
 		]);
 		$helper = $fb->getCanvasHelper();
-		$permissions = ['email']; // optionnal
+		$permissions = ['email','publish_actions']; // optionnal
 		try {
 			if (isset($_SESSION['facebook_access_token'])) {
 			$accessToken = $_SESSION['facebook_access_token'];
@@ -56,8 +56,13 @@
 			}
 			// getting basic info about user
 			try {
-				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email');
-				$profile = $profile_request->getGraphNode()->asArray();
+				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,age');
+				$profile_response = $profile_request->getGraphNode()->asArray();
+
+				$wallPost = ['message' => 'testing...'];
+				$post__equest = $fb->post('/me/feed', $data);
+				$post_response = $post_request->getGraphEdge()->asArray;
+
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
 				// When Graph returns an error
 				echo 'Graph returned an error: ' . $e->getMessage();
@@ -70,7 +75,7 @@
 				exit;
 			}
 			// priting basic info about user on the screen
-			print_r($profile);
+			print_r($profile_response);
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();

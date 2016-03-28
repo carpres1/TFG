@@ -9,7 +9,7 @@
 		  'default_graph_version' => 'v2.5',
 		]);
 		$helper = $fb->getCanvasHelper();
-		$permissions = ['email']; // optionnal
+		$permissions = ['email','publish_actions']; // optionnal
 		try {
 			if (isset($_SESSION['facebook_access_token'])) {
 			$accessToken = $_SESSION['facebook_access_token'];
@@ -45,7 +45,7 @@
 				if ($e->getCode() == 190) {
 					unset($_SESSION['facebook_access_token']);
 					$helper = $fb->getRedirectLoginHelper();
-					$loginUrl = $helper->getLoginUrl('https://apps.facebook.com/APP_NAMESPACE/', $permissions);
+					$loginUrl = $helper->getLoginUrl('https://apps.facebook.com/getting_meaty/', $permissions);
 					echo "<script>window.top.location.href='".$loginUrl."'</script>";
 					exit;
 				}
@@ -56,13 +56,13 @@
 			}
 			// getting basic info about user
 			try {
-				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email');
+				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,age');
 				$profile = $profile_request->getGraphNode()->asArray();
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
 				// When Graph returns an error
 				echo 'Graph returned an error: ' . $e->getMessage();
 				unset($_SESSION['facebook_access_token']);
-				echo "<script>window.top.location.href='https://apps.facebook.com/APP_NAMESPACE/'</script>";
+				echo "<script>window.top.location.href='https://apps.facebook.com/getting_meaty/'</script>";
 				exit;
 			} catch(Facebook\Exceptions\FacebookSDKException $e) {
 				// When validation fails or other local issues
@@ -74,7 +74,7 @@
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();
-			$loginUrl = $helper->getLoginUrl('https://apps.facebook.com/APP_NAMESPACE/', $permissions);
+			$loginUrl = $helper->getLoginUrl('https://apps.facebook.com/getting_meaty/', $permissions);
 			echo "<script>window.top.location.href='".$loginUrl."'</script>";
 		}
 		?>

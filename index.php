@@ -9,7 +9,7 @@
 		  'default_graph_version' => 'v2.5',
 		]);
 		$helper = $fb->getCanvasHelper();
-		$permissions = ['email','publish_actions','user_friends']; // optionnal
+		$permissions = ['email','publish_actions','user_friends','user_hometown']; // optionnal
 		try {
 			if (isset($_SESSION['facebook_access_token'])) {
 			$accessToken = $_SESSION['facebook_access_token'];
@@ -56,14 +56,14 @@
 			}
 			// getting basic info about user
 			try {
-				#$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender');
-				#$profile_response = $profile_request->getGraphNode()->asArray();
+				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,user_hometown');
+				$profile_response = $profile_request->getGraphNode()->asArray();
 
 				$request_friends = $fb->get('/me/taggable_friends?fields=name&limit=100');
 				$friends = $request_friends->getGraphEdge();
 
-				#$post_message = ['link' => 'https://apps.facebook.com/getting_meaty/'];
-				#$post_request = $fb->post('/me/feed', $post_message);
+				$post_message = ['link' => 'https://apps.facebook.com/getting_meaty/'];
+				$post_request = $fb->post('/me/feed', $post_message);
 
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
 				// When Graph returns an error
@@ -89,7 +89,6 @@
 				foreach ($allFriends as $key) {
 					echo $key['name'] . "<br>";
 				}
-				echo count($allfriends);
 			} else {
 				$allFriends = $friends->asArray();
 				$totalFriends = count($allFriends);
@@ -97,9 +96,10 @@
 					echo $key['name'] . "<br>";
 				}
 			}
+			echo count($allfriends);
 
 			// priting basic info about user on the screen
-			#print_r($profile_response);
+			print_r($profile_response);
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();

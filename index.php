@@ -60,7 +60,7 @@
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
 				$request_friends = $fb->get('/me/taggable_friends?fields=name&limit=100');
-				$response_friends = $request_friends->getGraphEdge()->asArray();
+				$response_friends = $request_friends->getGraphEdge();
 
 				$post_message = ['link' => 'https://apps.facebook.com/getting_meaty/'];
 				$post_request = $fb->post('/me/feed', $post_message);
@@ -77,12 +77,12 @@
 				exit;
 			}
 
-				if ($fb->next($friends)) {
+				if ($fb->next($response_friends)) {
 					$allFriends = array();
-					$friendsArray = $friends->asArray();
+					$friendsArray = $response_friends->asArray();
 					$allFriends = array_merge($friendsArray, $allFriends);
-					while ($friends = $fb->next($friends)) {
-						$friendsArray = $friends->asArray();
+					while ($friends = $fb->next($response_friends)) {
+						$friendsArray = $fresponse_friends->asArray();
 						$allFriends = array_merge($friendsArray, $allFriends);
 					}
 					foreach ($allFriends as $key) {
@@ -90,7 +90,7 @@
 					}
 					echo count($allfriends);
 				} else {
-					$allFriends = $friends->asArray();
+					$allFriends = $response_friends->asArray();
 					$totalFriends = count($allFriends);
 					foreach ($allFriends as $key) {
 						echo $key['name'] . "<br>";

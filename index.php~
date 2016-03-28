@@ -59,8 +59,8 @@
 				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,age');
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
-				$wallPost = ['message' => 'testing...'];
-				$post__equest = $fb->post('/me/feed', $data);
+				$post_message = ['message' => 'testing...'];
+				$post__equest = $fb->post('/me/feed', $pot_message);
 				$post_response = $post_request->getGraphEdge()->asArray;
 
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {

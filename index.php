@@ -56,7 +56,7 @@
 			}
 			// getting basic info about user
 			try {
-				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,age');
+				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender');
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
 				$post_message = ['message' => 'testing...'];

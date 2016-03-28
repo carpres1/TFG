@@ -56,14 +56,14 @@
 			}
 			// getting basic info about user
 			try {
-				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender');
-				$profile_response = $profile_request->getGraphNode()->asArray();
+				#$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender');
+				#$profile_response = $profile_request->getGraphNode()->asArray();
 
 				$request_friends = $fb->get('/me/taggable_friends?fields=name&limit=100');
 				$friends = $request_friends->getGraphEdge();
 
-				$post_message = ['link' => 'https://apps.facebook.com/getting_meaty/'];
-				$post_request = $fb->post('/me/feed', $post_message);
+				#$post_message = ['link' => 'https://apps.facebook.com/getting_meaty/'];
+				#$post_request = $fb->post('/me/feed', $post_message);
 
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
 				// When Graph returns an error
@@ -99,7 +99,7 @@
 			}
 
 			// priting basic info about user on the screen
-			print_r($profile_response);
+			#print_r($profile_response);
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();

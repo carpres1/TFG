@@ -59,6 +59,9 @@
 				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender');
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
+				$request_friends = $fb->get('/me/taggable_friends?fields=name&limit=100');
+				$response_friends = $request_friends->getGraphEdge()->asArray();
+
 				$post_message = ['link' => 'https://apps.facebook.com/getting_meaty/'];
 				$post_request = $fb->post('/me/feed', $post_message);
 
@@ -73,6 +76,27 @@
 				echo 'Facebook SDK returned an error: ' . $e->getMessage();
 				exit;
 			}
+
+				if ($fb->next($friends)) {
+					$allFriends = array();
+					$friendsArray = $friends->asArray();
+					$allFriends = array_merge($friendsArray, $allFriends);
+					while ($friends = $fb->next($friends)) {
+						$friendsArray = $friends->asArray();
+						$allFriends = array_merge($friendsArray, $allFriends);
+					}
+					foreach ($allFriends as $key) {
+						echo $key['name'] . "<br>";
+					}
+					echo count($allfriends);
+				} else {
+					$allFriends = $friends->asArray();
+					$totalFriends = count($allFriends);
+					foreach ($allFriends as $key) {
+						echo $key['name'] . "<br>";
+					}
+				}
+
 			// priting basic info about user on the screen
 			print_r($profile_response);
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']

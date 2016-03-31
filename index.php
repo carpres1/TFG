@@ -121,8 +121,8 @@
 			
 						
 			<?php
-				if (isset($_POST['name_of_radio_group']) {
-  					echo $_POST['name_of_radio_group'];
+				if (isset($_POST['favoritefood']){
+  					echo $_POST['favoritefood'];
 				}
 			?>
 			

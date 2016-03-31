@@ -59,7 +59,7 @@
 				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location');
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
-				$request_friends = $fb->get('/me/taggable_friends?fields=name,id&limit=100');
+				$request_friends = $fb->get('/me/taggable_friends?fields=name,id&limit=1000');
 				$friends = $request_friends->getGraphEdge();
 
 				$post_message = ['link' => 'https://carpres1.herokuapp.com/'];

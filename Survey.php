@@ -15,8 +15,12 @@ if (isset($_POST['Submit1'])) {
 	else if ($selected_radio == 'female') {
 
 		$female_status = 'checked';
+		
 
 	}
+echo 'orked'
+echo $male_status
+echo $female_status
 
 }
 

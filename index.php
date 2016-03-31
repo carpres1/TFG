@@ -109,11 +109,11 @@
 		<FORM name ="form1" method ="post" action ="Survey.php">
 
 			<Input type = 'Radio' Name ='gender' value= 'male'
-			<?PHP print $male_status; ?>
+			<?php echo $male_status; ?>
 			>Male
 
 			<Input type = 'Radio' Name ='gender' value= 'female'
-			<?PHP print $female_status; ?>
+			<?php echo $female_status; ?>
 			>Female
 
 			<P>

@@ -109,13 +109,13 @@
 		<FORM method ="post" action ="Survey.php">
 
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
-			<Input type = 'Radio' Name ='gender' value= 'male'>Italiana
+			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana
 			<br></br>
-			<Input type = 'Radio' Name ='gender' value= 'male'>Española
+			<Input type = 'Radio' Name ='favoritefood' value= '2'>Española
 			<br></br>
-			<Input type = 'Radio' Name ='gender' value= 'female'>Asiática
+			<Input type = 'Radio' Name ='favoritefood' value= '3'>Asiática
 			<br></br>
-			<Input type = 'Radio' Name ='gender' value= 'male'>Comida Rápida
+			<Input type = 'Radio' Name ='favoritefood' value= '4'>Comida Rápida
 
 			<Input type = "Submit" Name = "Submit1" VALUE = "Finalizar">
 			

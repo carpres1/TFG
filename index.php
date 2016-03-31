@@ -89,6 +89,15 @@
 			} else {
 				$allFriends = $friends->asArray();
 			}
+
+			$favoritefood= $timesout= $allergies= $fishtimes= 0;
+			$favoritefoodErr=""; 
+
+			if (empty($_POST["¿Cuál de las siguientes opciones es tu comida favorita?"])) {
+    				 $favoritefoodErr = "Has de responder cual es tu comida favorita";
+   			} else {
+     				$favoritefood = test_input($_POST["¿Cuál de las siguientes opciones es tu comida favorita?"]);
+   			}
 			echo count($allFriends);
 			
 
@@ -101,5 +110,10 @@
 			echo "<script>window.top.location.href='".$loginUrl."'</script>";
 		}
 		?>
+		<p>¿Cuál de las siguientes opciones es tu comida favorita?</p>
+		<input type="radio" name="gender" <?php if (isset($favoritefood) && $favoritefood=="1") echo "checked";?>  value="female">Italiana
+		<input type="radio" name="gender" <?php if (isset($favoritefood) && $favoritefood=="2") echo "checked";?>  value="female">Española
+		<input type="radio" name="gender" <?php if (isset($favoritefood) && $favoritefood=="3") echo "checked";?>  value="female">Asiática
+   		<input type="radio" name="gender" <?php if (isset($favoritefood) && $favoritefood=="4") echo "checked";?>  value="male">Fast Food
 	</body>
 </html>

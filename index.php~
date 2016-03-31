@@ -106,15 +106,11 @@
 			echo "<script>window.top.location.href='".$loginUrl."'</script>";
 		}
 		?>
-		<FORM name ="form1" method ="post" action ="Survey.php">
+		<FORM method ="post" action ="Survey.php">
 
-			<Input type = 'Radio' Name ='gender' value= 'male'
-			<?PHP print $male_status; ?>
-			>Male
+			<Input type = 'Radio' Name ='gender' value= 'male'>Male
 
-			<Input type = 'Radio' Name ='gender' value= 'female'
-			<?PHP print $female_status; ?>
-			>Female
+			<Input type = 'Radio' Name ='gender' value= 'female'>Female
 
 			<P>
 			<Input type = "Submit" Name = "Submit1" VALUE = "Select a Radio Button">

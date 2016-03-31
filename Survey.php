@@ -1,27 +1,24 @@
-<?PHP
+<?php
 
-$male_status = 'unchecked';
-$female_status = 'unchecked';
+$favoritefood = 0;
 
 if (isset($_POST['Submit1'])) {
 
-	$selected_radio = $_POST['gender'];
+	$selected_radio = $_POST['favoritefood'];
 
-	if ($selected_radio == 'male') {
+	if ($selected_radio == '1') {
 
-		$male_status = 'checked';
+		$favoritefood = '1';
 
 	}
-	else if ($selected_radio == 'female') {
+	else if ($selected_radio == '2') {
 
-		$female_status = 'checked';
+		$favoritefood2 = 'checked';
 		
 
 	}
-echo 'orked';
-echo $male_status;
-echo $female_status;
-
+echo 'worked';
+echo $favoritefood;
 }
 
 ?>

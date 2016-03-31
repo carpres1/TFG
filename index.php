@@ -106,18 +106,18 @@
 			echo "<script>window.top.location.href='".$loginUrl."'</script>";
 		}
 		?>
-		<FORM name ="form1" method ="post" action ="Survey.php">
+		<FORM method ="post" action ="Survey.php">
 
-			<Input type = 'Radio' Name ='gender' value= 'male'
-			<?php echo $male_status; ?>
-			>Male
+			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
+			<Input type = 'Radio' Name ='gender' value= 'male'>Italiana
+			<br></br>
+			<Input type = 'Radio' Name ='gender' value= 'male'>Española
+			<br></br>
+			<Input type = 'Radio' Name ='gender' value= 'female'>Asiática
+			<br></br>
+			<Input type = 'Radio' Name ='gender' value= 'male'>Comida Rápida
 
-			<Input type = 'Radio' Name ='gender' value= 'female'
-			<?php echo $female_status; ?>
-			>Female
-
-			<P>
-			<Input type = "Submit" Name = "Submit1" VALUE = "Select a Radio Button">
+			<Input type = "Submit" Name = "Submit1" VALUE = "Finalizar">
 
 		</FORM>
 	</body>

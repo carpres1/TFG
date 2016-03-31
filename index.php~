@@ -108,12 +108,16 @@
 		?>
 		<FORM method ="post" action ="Survey.php">
 
-			<Input type = 'Radio' Name ='gender' value= 'male'>Male
+			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
+			<Input type = 'Radio' Name ='gender' value= 'male'>Italiana
+			<br></br>
+			<Input type = 'Radio' Name ='gender' value= 'male'>Española
+			<br></br>
+			<Input type = 'Radio' Name ='gender' value= 'female'>Asiática
+			<br></br>
+			<Input type = 'Radio' Name ='gender' value= 'male'>Comida Rápida
 
-			<Input type = 'Radio' Name ='gender' value= 'female'>Female
-
-			<P>
-			<Input type = "Submit" Name = "Submit1" VALUE = "Select a Radio Button">
+			<Input type = "Submit" Name = "Submit1" VALUE = "Finalizar">
 
 		</FORM>
 	</body>

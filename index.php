@@ -120,9 +120,11 @@
 			<Input type = "Submit" Name = "Submit1" VALUE = "Finalizar">
 			
 						
-			if(!$("input[name=favoritefood]:checked").val()) {
-				alert('No hay ninguna opción seleccionada');
-			}
+			<?php
+				if (isset($_POST['name_of_radio_group']) {
+  					echo $_POST['name_of_radio_group'];
+				}
+			?>
 			
 
 		</FORM>

@@ -1,4 +1,9 @@
 <html>
+	<head>
+		<style>
+			.error {color: #FF0000;}
+		</style>
+	</head>
 	<body>
 		<?php
 		session_start();
@@ -90,19 +95,21 @@
 				$allFriends = $friends->asArray();
 			}
 
+			// The survey itself starts here with the radioButtons
 			$favoritefood= $timesout= $allergies= $fishtimes= 0;
 			$favoritefoodErr=""; 
 
-			if (empty($_POST["¿Cuál de las siguientes opciones es tu comida favorita?"])) {
-    				 $favoritefoodErr = "Has de responder cual es tu comida favorita";
-   			} else {
-     				$favoritefood = test_input($_POST["¿Cuál de las siguientes opciones es tu comida favorita?"]);
-   			}
-			echo count($allFriends);
+			if ($_SERVER["REQUEST_METHOD"] == "POST") {
+				if (empty($_POST["favoritefood"])) {
+	    				 $favoritefoodErr = "Has de responder cual es tu comida favorita";
+	   			} else {
+	     				$favoritefood = ($_POST["favoritefood"]);
+	   			}
+			}		
 			
 
 			// priting basic info about user on the screen
-			print_r($profile_response);
+			#print_r($profile_response);
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();
@@ -110,16 +117,19 @@
 			echo "<script>window.top.location.href='".$loginUrl."'</script>";
 		}
 		?>
+		<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"> 
 		<p>¿Cuál de las siguientes opciones es tu comida favorita?</p>
-		<input type="radio" name="gender" <?php if (isset($favoritefood) && $favoritefood=="1") echo "checked";?>  value="female">Italiana
+		<span class="error">* <?php echo $genderErr;?></span>
+		<input type="radio" name="favoritefood" <?php if (isset($favoritefood) && $favoritefood=="1") echo "checked";?>  value="female">Italiana
 		<br></br>
-		<input type="radio" name="gender" <?php if (isset($favoritefood) && $favoritefood=="2") echo "checked";?>  value="female">Española
+		<input type="radio" name="favoritefood" <?php if (isset($favoritefood) && $favoritefood=="2") echo "checked";?>  value="female">Española
 		<br></br>
-		<input type="radio" name="gender" <?php if (isset($favoritefood) && $favoritefood=="3") echo "checked";?>  value="female">Asiática
+		<input type="radio" name="favoritefood" <?php if (isset($favoritefood) && $favoritefood=="3") echo "checked";?>  value="female">Asiática
 		<br></br>
-   		<input type="radio" name="gender" <?php if (isset($favoritefood) && $favoritefood=="4") echo "checked";?>  value="male">Fast Food
+   		<input type="radio" name="favoritefood" <?php if (isset($favoritefood) && $favoritefood=="4") echo "checked";?>  value="male">Fast Food
 		<br></br>
-		<input type="submit" name="Finalizar" value="Submit"> 
+		<input type="submit" name="Finalizar" value="Submit">
+		</form> 
 		<?php
 			if($favoritefood!=0){
 				echo $favoritefood;

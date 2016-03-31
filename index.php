@@ -119,7 +119,7 @@
 		?>
 		<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"> 
 		<p>¿Cuál de las siguientes opciones es tu comida favorita?</p>
-		<span class="error">* <?php echo $genderErr;?></span>
+		<span class="error">* <?php echo $favoritefoodErr;?></span>
 		<input type="radio" name="favoritefood" <?php if (isset($favoritefood) && $favoritefood=="1") echo "checked";?>  value="female">Italiana
 		<br></br>
 		<input type="radio" name="favoritefood" <?php if (isset($favoritefood) && $favoritefood=="2") echo "checked";?>  value="female">Española

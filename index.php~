@@ -95,8 +95,10 @@
 				$allFriends = $friends->asArray();
 			}
 
+			// The survey itself starts here with the radioButtons
 			$favoritefood= $timesout= $allergies= $fishtimes= 0;
 			$favoritefoodErr=""; 
+
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				if (empty($_POST["favoritefood"])) {
 	    				 $favoritefoodErr = "Has de responder cual es tu comida favorita";
@@ -115,7 +117,7 @@
 			echo "<script>window.top.location.href='".$loginUrl."'</script>";
 		}
 		?>
-		
+		<form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>"> 
 		<p>¿Cuál de las siguientes opciones es tu comida favorita?</p>
 		<span class="error">* <?php echo $genderErr;?></span>
 		<input type="radio" name="favoritefood" <?php if (isset($favoritefood) && $favoritefood=="1") echo "checked";?>  value="female">Italiana
@@ -126,7 +128,8 @@
 		<br></br>
    		<input type="radio" name="favoritefood" <?php if (isset($favoritefood) && $favoritefood=="4") echo "checked";?>  value="male">Fast Food
 		<br></br>
-		<input type="submit" name="Finalizar" value="Submit"> 
+		<input type="submit" name="Finalizar" value="Submit">
+		</form> 
 		<?php
 			if($favoritefood!=0){
 				echo $favoritefood;

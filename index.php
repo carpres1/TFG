@@ -112,8 +112,17 @@
 		?>
 		<p>¿Cuál de las siguientes opciones es tu comida favorita?</p>
 		<input type="radio" name="gender" <?php if (isset($favoritefood) && $favoritefood=="1") echo "checked";?>  value="female">Italiana
+		<br></br>
 		<input type="radio" name="gender" <?php if (isset($favoritefood) && $favoritefood=="2") echo "checked";?>  value="female">Española
+		<br></br>
 		<input type="radio" name="gender" <?php if (isset($favoritefood) && $favoritefood=="3") echo "checked";?>  value="female">Asiática
+		<br></br>
    		<input type="radio" name="gender" <?php if (isset($favoritefood) && $favoritefood=="4") echo "checked";?>  value="male">Fast Food
+		<br></br>
+		<input type="submit" name="Finalizar" value="Submit"> 
+		<?php
+			if($favoritefood!=0){
+				echo $favoritefood;
+			}else{echo $favoritefoodErr;}
 	</body>
 </html>

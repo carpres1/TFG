@@ -18,9 +18,9 @@ if (isset($_POST['Submit1'])) {
 		
 
 	}
-echo 'orked'
-echo $male_status
-echo $female_status
+echo 'orked';
+echo $male_status;
+echo $female_status;
 
 }
 

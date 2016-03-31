@@ -118,6 +118,12 @@
 			<Input type = 'Radio' Name ='gender' value= 'male'>Comida Rápida
 
 			<Input type = "Submit" Name = "Submit1" VALUE = "Finalizar">
+			
+			<?php			
+			if(!$("input[name=favoritefood]:checked").val()) {
+				alert('No hay ninguna opción seleccionada');
+			}
+			?>
 
 		</FORM>
 	</body>

@@ -124,5 +124,6 @@
 			if($favoritefood!=0){
 				echo $favoritefood;
 			}else{echo $favoritefoodErr;}
+		?>
 	</body>
 </html>

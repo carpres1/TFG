@@ -120,5 +120,9 @@
    		<input type="radio" name="gender" <?php if (isset($favoritefood) && $favoritefood=="4") echo "checked";?>  value="male">Fast Food
 		<br></br>
 		<input type="submit" name="Finalizar" value="Submit"> 
+		<?php
+			if($favoritefood!=0){
+				echo $favoritefood;
+			}else{echo $favoritefoodErr;}
 	</body>
 </html>

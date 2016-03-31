@@ -78,14 +78,17 @@
 			}
 
 			//As the page of friends hasa maximumthis methods gets all the friends in the same array
-			
-			$allFriends = array();
-			$friendsArray = $friends->asArray();
-			while ($friends = $fb->next($friends)) {
+			if ($fb->next($friends)) {
+				$allFriends = array();
 				$friendsArray = $friends->asArray();
-				$allFriends = array_merge($friendsArray, $allFriends);
-			}
+				while ($friends = $fb->next($friends)) {
+					$friendsArray = $friends->asArray();
+					$allFriends = array_merge($friendsArray, $allFriends);
+				}
 				
+			} else {
+				$allFriends = $friends->asArray();
+			}
 			echo count($allFriends);
 			
 

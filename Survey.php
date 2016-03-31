@@ -5,18 +5,18 @@ $female_status = 'unchecked';
 
 if (isset($_POST['Submit1'])) {
 
-$selected_radio = $_POST['gender'];
+	$selected_radio = $_POST['gender'];
 
-if ($selected_radio = = 'male') {
+	if ($selected_radio == 'male') {
 
-$male_status = 'checked';
+		$male_status = 'checked';
 
-}
-else if ($selected_radio = = 'female') {
+	}
+	else if ($selected_radio == 'female') {
 
-$female_status = 'checked';
+		$female_status = 'checked';
 
-}
+	}
 
 }
 

@@ -106,7 +106,7 @@
 			echo "<script>window.top.location.href='".$loginUrl."'</script>";
 		}
 		?>
-		<FORM method ="post" action ="Survey.php">
+		<FORM method ="post" action ="index.php">
 
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
 			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana
@@ -122,6 +122,7 @@
 						
 			<?php
 				function myFunction(){
+					echo "at least it works until here";
 					if (!isset($_POST['favoritefood'])){
     						echo "No Language gotten";
     					return;

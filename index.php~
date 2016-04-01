@@ -117,11 +117,12 @@
 			<br></br>
 			<Input type = 'Radio' Name ='favoritefood' value= '4'>Comida Rápida
 
-			<Input  onclick="myFunction()" VALUE = "Finalizar">
+			<button  onclick="myFunction()" >Finalizar</button>
 			
 						
 			<?php
 				function myFunction(){
+					echo "at least it works until here";
 					if (!isset($_POST['favoritefood'])){
     						echo "No Language gotten";
     					return;

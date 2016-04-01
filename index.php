@@ -109,7 +109,7 @@
 		<FORM method ="post" action ="Survey.php">
 
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
-			<Input type = 'Radio' Name ='' value= '1'>Italiana
+			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana
 			<br></br>
 			<Input type = 'Radio' Name ='favoritefood' value= '2'>Española
 			<br></br>
@@ -118,10 +118,13 @@
 			<Input type = 'Radio' Name ='favoritefood' value= '4'>Comida Rápida
 			<br></br>
 			<script type="text/javascript">
-				 $("#p").hide();
-				window.alert(5 + 6);
-				$("input[type=Radio]").click(function(event) {
-				    $("#p").show();
+				$(document).ready(function(){
+					$("#p").hide();
+					window.alert(5 + 6);
+					$("input[type=Radio]").click(function(event) {
+					   window.alert(5 + 6);
+					    $("#p").show();
+					});
 				});
 			</script>
 			<p><Input type = "Submit" Name = "Submit1" VALUE = "Siguiente"></p>

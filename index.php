@@ -123,7 +123,7 @@
 					$("#p").hide();
 					window.alert(5 + 6);
 					$("input[type=Radio]").click(function(event) {
-					   window.alert(5 + 6);
+					   window.alert(6 + 6);
 					    $("#p").show();
 					});
 				});

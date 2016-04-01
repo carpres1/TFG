@@ -118,15 +118,14 @@
 			<Input type = 'Radio' Name ='favoritefood' value= '4'>Comida Rápida
 			<br></br>
 			<script type="text/javascript">
-				$(document).ready(function () {
-					var $next=$("#Submit1").hide(),
-					 $answered = $('input[name="favoritefood"]').click(function () {
-           				 $submit.toggle($answered.is(":checked"));
-           				 $('[name=Submit1]').toggle(!$answered.is(":checked"));
-       						 });
-					});
+				$(document).ready(function(){
+					 $("p").hide();
+					if( $('input[name=groupName]').is(':checked') ){
+     						$("p").show(); 
+					}
+				});	
 			</script>	
-			<Input type = "button" Name = "Submit1" VALUE = "Siguiente">
+			<p><Input type = "Submit" Name = "Submit1" VALUE = "Siguiente"></p>
 			
 						
 			

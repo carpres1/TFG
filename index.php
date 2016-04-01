@@ -119,9 +119,8 @@
 			<br></br>
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<script type="text/javascript">
+				$("p").hide();
 				$(document).ready(function(){
-					window.alert(5 + 6);
-					 $("p").hide();
 					if( $('input[name=groupName]').is(':checked') ){
      						$("p").show(); 
 					}

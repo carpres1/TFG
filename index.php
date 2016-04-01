@@ -106,7 +106,7 @@
 			echo "<script>window.top.location.href='".$loginUrl."'</script>";
 		}
 		?>
-		<FORM method ="post" action ="survey.php">
+		<FORM method ="post" action ="Survey.php">
 
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
 			<Input type = 'Radio' Name ='' value= '1'>Italiana
@@ -126,7 +126,7 @@
        						 });
 					});
 			</script>	
-			<Input type = "Submit" Name = "Submit1" VALUE = "Siguiente">
+			<Input type = "button" Name = "Submit1" VALUE = "Siguiente">
 			
 						
 			

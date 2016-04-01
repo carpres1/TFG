@@ -121,8 +121,9 @@
 				$(document).ready(function(){
 					 $("p").hide();
 					if( $('input[name=groupName]').is(':checked') ){
-     						$("p").show(); //do something
-					}	
+     						$("p").show(); 
+					}
+				});	
 			</script>	
 			<p><Input type = "Submit" Name = "Submit1" VALUE = "Siguiente"></p>
 			

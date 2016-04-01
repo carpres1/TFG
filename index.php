@@ -117,16 +117,16 @@
 			<br></br>
 			<Input type = 'Radio' Name ='favoritefood' value= '4'>Comida Rápida
 			<br></br>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+			<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 			<script type="text/javascript">
 				$(document).ready(function(){
-					$("p").hide();
-					$("#favoritefood").click(function(){
-       						 $("p").show();
-    					});
+				    $("p").hide();
+				    $('input[type="Radio"]').click(function(){
+					    $("p").show();
 					}
-				});	
-			</script>	
+				    });
+				});
+			</script>
 			<p><Input type = "Submit" Name = "Submit1" VALUE = "Siguiente"></p>
 			
 						

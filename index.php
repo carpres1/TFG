@@ -106,29 +106,29 @@
 			echo "<script>window.top.location.href='".$loginUrl."'</script>";
 		}
 		?>
-		<FORM method ="post" action ="index.php">
+		<FORM method ="post" action ="survey.php">
 
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
-			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana
+			<Input type = 'Radio' Name ='' value= '1'>Italiana
 			<br></br>
 			<Input type = 'Radio' Name ='favoritefood' value= '2'>Española
 			<br></br>
 			<Input type = 'Radio' Name ='favoritefood' value= '3'>Asiática
 			<br></br>
 			<Input type = 'Radio' Name ='favoritefood' value= '4'>Comida Rápida
-
-			<button  onclick="myFunction()" >Finalizar</button>
+			<br></br>
+			<script type="text/javascript">
+				$(document).ready(function () {
+					var $next=$("#Submit1").hide(),
+					 $answered = $('input[name="favoritefood"]').click(function () {
+           				 $submit.toggle($answered.is(":checked"));
+           				 $('[name=Submit1]').toggle(!$answered.is(":checked"));
+       						 });
+					});
+			</script>	
+			<Input type = "Submit" Name = "Submit1" VALUE = "Siguiente">
 			
 						
-			<?php
-				function myFunction(){
-					echo "at least it works until here";
-					if (!isset($_POST['favoritefood'])){
-    						echo "No Language gotten";
-    					return;
-				}
-				}
-			?>
 			
 
 		</FORM>

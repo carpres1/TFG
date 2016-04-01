@@ -13,7 +13,7 @@ if (isset($_POST['Submit1'])) {
 	}
 	else if ($selected_radio == '2') {
 
-		$favoritefood2 = 'checked';
+		$favoritefood = 2;
 		
 
 	}

@@ -120,15 +120,15 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<script type="text/javascript">
 				$(document).ready(function(){
-					$("#p").hide();
+					$("input[type=Submit]").hide();
 					window.alert(5 + 6);
 					$("input[type=Radio]").click(function(event) {
 					   window.alert(6 + 6);
-					    $("#p").show();
+					    $("input[type=Submit]").show();
 					});
 				});
 			</script>
-			<p><Input type = "Submit" Name = "Submit1" VALUE = "Siguiente"></p>
+			<Input type = "Submit" Name = "Submit1" VALUE = "Siguiente">
 			
 						
 			

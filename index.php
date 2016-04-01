@@ -117,7 +117,7 @@
 			<br></br>
 			<Input type = 'Radio' Name ='favoritefood' value= '4'>Comida Rápida
 
-			<Input  onclick="myFunction()" VALUE = "Finalizar">
+			<button  onclick="myFunction()" >Finalizar</button>
 			
 						
 			<?php

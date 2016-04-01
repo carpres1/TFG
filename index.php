@@ -117,13 +117,13 @@
 			<br></br>
 			<Input type = 'Radio' Name ='favoritefood' value= '4'>Comida Rápida
 			<br></br>
-			<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 			<script type="text/javascript">
 				$(document).ready(function(){
 				    $("p").hide();
-				    $('input[type="Radio"]').click(function(){
-					    $("p").show();
-					}
+				    $('#Radio').click(function() {
+   					if($('#favoritefood').is(':checked')) { alert("it's checked"); }
+				 	});
+
 				    });
 				});
 			</script>

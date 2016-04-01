@@ -121,7 +121,7 @@
 			
 						
 			<?php
-				if (!isset($_POST['taal'])){
+				if (!isset($_POST['favoritefood'])){
     					echo "No Language gotten";
     				return;
 				}

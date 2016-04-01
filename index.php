@@ -118,13 +118,10 @@
 			<Input type = 'Radio' Name ='favoritefood' value= '4'>Comida Rápida
 			<br></br>
 			<script type="text/javascript">
-				$(document).ready(function(){
-				    $("p").hide();
-				    $('#Radio').click(function() {
-   					if($('#favoritefood').is(':checked')) { alert("it's checked"); }
-				 	});
-
-				    });
+				 $("#p").hide();
+				window.alert(5 + 6);
+				$("input[type=Radio]").click(function(event) {
+				    $("#p").show();
 				});
 			</script>
 			<p><Input type = "Submit" Name = "Submit1" VALUE = "Siguiente"></p>

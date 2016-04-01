@@ -119,6 +119,7 @@
 			<br></br>
 			<script type="text/javascript">
 				$(document).ready(function(){
+					window.alert(5 + 6);
 					 $("p").hide();
 					if( $('input[name=groupName]').is(':checked') ){
      						$("p").show(); 

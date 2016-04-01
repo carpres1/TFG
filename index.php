@@ -117,7 +117,7 @@
 			<br></br>
 			<Input type = 'Radio' Name ='favoritefood' value= '4'>Comida Rápida
 
-			<Input type = "Submit" Name = "Submit1" VALUE = "Finalizar" onclick="myFunction()">
+			<Input  onclick="myFunction()" type = "Submit" Name = "Submit1" VALUE = "Finalizar">
 			
 						
 			<?php

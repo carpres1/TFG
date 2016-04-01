@@ -121,9 +121,7 @@
 			<script type="text/javascript">
 				$(document).ready(function(){
 					$("input[type=Submit]").hide();
-					window.alert(5 + 6);
 					$("input[type=Radio]").click(function(event) {
-					   window.alert(6 + 6);
 					    $("input[type=Submit]").show();
 					});
 				});

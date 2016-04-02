@@ -95,7 +95,6 @@
 				$allFriends = $friends->asArray();
 			}
 
-			echo $allFriends;
 
 			// priting basic info about user on the screen
 			#print_r($profile_response);
@@ -107,7 +106,20 @@
 		}
 		?>
 		<FORM method ="post" action ="Survey.php">
-
+			
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					$("input[type=Submit]").hide();
+					$("q2").hide();
+					$("input[type=Radio]").click(function(event) {
+					    $("q1").hide();
+					    $("q2").show();
+					    $("input[type=Submit]").show();
+					});
+				});
+			</script>
+			<div id='q1'>
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
 			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana
 			<br></br>
@@ -117,15 +129,18 @@
 			<br></br>
 			<Input type = 'Radio' Name ='favoritefood' value= '4'>Comida Rápida
 			<br></br>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-			<script type="text/javascript">
-				$(document).ready(function(){
-					$("input[type=Submit]").hide();
-					$("input[type=Radio]").click(function(event) {
-					    $("input[type=Submit]").show();
-					});
-				});
-			</script>
+			</div>
+			<div id='q2'>
+			<p><strong>¿alergias?</strong></p>
+			<Input type = 'Radio' Name ='alergy' value= '1'>Italiana
+			<br></br>
+			<Input type = 'Radio' Name ='alergy' value= '2'>Española
+			<br></br>
+			<Input type = 'Radio' Name ='alergy' value= '3'>Asiática
+			<br></br>
+			<Input type = 'Radio' Name ='alergy' value= '4'>Comida Rápida
+			<br></br>
+			</div>
 			<Input type = "Submit" Name = "Submit1" VALUE = "Siguiente">
 			
 						

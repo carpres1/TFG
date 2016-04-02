@@ -1,7 +1,7 @@
 <?php
 
 $favoritefood = 0;
-$alergy
+$alergy =0;
 
 if (isset($_POST['Submit1'])) {
 if (!isset($_POST['favoritefood'])){

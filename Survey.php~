@@ -1,6 +1,7 @@
 <?php
 
 $favoritefood = 0;
+$alergy
 
 if (isset($_POST['Submit1'])) {
 if (!isset($_POST['favoritefood'])){
@@ -8,20 +9,22 @@ if (!isset($_POST['favoritefood'])){
     	return;
 				}
 	$selected_radio = $_POST['favoritefood'];
+	$selected_radio2 = $_POST['alergy'];
 
 	if ($selected_radio == '1') {
 
 		$favoritefood = '1';
 
 	}
-	else if ($selected_radio == '2') {
+	if ($selected_radio2 == '2') {
 
-		$favoritefood = 2;
+		$alergy = 2;
 		
 
 	}
 echo 'worked';
 echo $favoritefood;
+echo $alergy;
 }
 
 ?>

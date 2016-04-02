@@ -122,6 +122,7 @@
 					$("#Next").click(function(){
        						if (!$("input[name='favoritefood']:checked").val()) {
    							window.alert("Has de elegir alguna opción");
+							$("#survery").load("index.php");
 						}
 						else {
   							q1.style.display="none";

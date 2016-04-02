@@ -126,7 +126,7 @@
 						}
 						else {
   							q1.style.display="none";
-					    		q2.style.display="block";
+					    		q2.show();
 						}
 
 

@@ -110,10 +110,13 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<script language="javascript">
 				$(document).ready(function(){
+					var q1=document.getElementById("q1")
 					var q2=document.getElementById("q2")
 					q2.style.display="none";
 					$("input[type=Submit]").hide();
 					$("input[type=Radio]").click(function(event) {
+					    q1.style.display="none";
+					    q2.style.display="block";
 					    $("input[type=Submit]").show();
 					});
 				});

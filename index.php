@@ -95,7 +95,7 @@
 				$allFriends = $friends->asArray();
 			}
 
-			echo $allFriends
+			echo $allFriends;
 
 			// priting basic info about user on the screen
 			#print_r($profile_response);

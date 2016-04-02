@@ -115,10 +115,21 @@
 					q2.style.display="none";
 					$("input[type=Submit]").hide();
 					$("input[type=Radio]").click(function(event) {
-					    q1.style.display="none";
-					    q2.style.display="block";
+					    
 					    $("input[type=Submit]").show();
 					});
+					
+					$("#Next").click(function(){
+       						if (!$("input[name='favoritefood']:checked").val()) {
+   							
+						}
+						else {
+  							q1.style.display="none";
+					    		q2.style.display="block";
+						}
+
+
+    					});
 				});
 			</script>
 			<div id='q1'>
@@ -143,6 +154,8 @@
 			<Input type = 'Radio' Name ='alergy' value= '4'>Comida Rápida
 			<br></br>
 			</div>
+			<button id="hide">Anterior</button>
+			<button id="Next">Siguiente</button>
 			<Input type = "Submit" Name = "Submit1" VALUE = "Siguiente">
 			
 						

@@ -110,30 +110,28 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<script language="javascript">
 				$(document).ready(function(){
-					/*var q1=document.getElementById("q1")
+					var q1=document.getElementById("q1")
 					var q2=document.getElementById("q2")
 					q2.style.display="none";
 					$("input[type=Submit]").hide();
 					$("input[type=Radio]").click(function(event) {
-					    q1.style.display="none";
-					    q2.style.display="block";
+					    
 					    $("input[type=Submit]").show();
 					});
-					*/
+					
 					$("#Next").click(function(){
        						if (!$("input[name='favoritefood']:checked").val()) {
-   							alert('Nothing is checked!');
+   							
 						}
 						else {
-  							alert('One of the radio buttons is checked!');
+  							q1.style.display="none";
+					    		q2.style.display="block";
 						}
 
 
     					});
 				});
 			</script>
-			<button id="hide">Anterior</button>
-			<button id="Next">Siguiente</button>
 			<div id='q1'>
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
 			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana
@@ -156,6 +154,8 @@
 			<Input type = 'Radio' Name ='alergy' value= '4'>Comida Rápida
 			<br></br>
 			</div>
+			<button id="hide">Anterior</button>
+			<button id="Next">Siguiente</button>
 			<Input type = "Submit" Name = "Submit1" VALUE = "Siguiente">
 			
 						

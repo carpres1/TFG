@@ -67,8 +67,8 @@
 				$request_friends = $fb->get('/me/taggable_friends?fields=name,id&limit=5000');
 				$friends = $request_friends->getGraphEdge();
 
-				$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
-				$post_request = $fb->post('/me/feed', $post_message);
+				#$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
+				#$post_request = $fb->post('/me/feed', $post_message);
 
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
 				// When Graph returns an error
@@ -121,9 +121,7 @@
 			<script type="text/javascript">
 				$(document).ready(function(){
 					$("input[type=Submit]").hide();
-					window.alert(5 + 6);
 					$("input[type=Radio]").click(function(event) {
-					   window.alert(6 + 6);
 					    $("input[type=Submit]").show();
 					});
 				});

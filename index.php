@@ -64,11 +64,11 @@
 				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location');
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
-				$request_friends = $fb->get('/me/taggable_friends?fields=name,id&limit=5000');
+				$request_friends = $fb->get('/me/taggable_friends?fields=user&limit=5000');
 				$friends = $request_friends->getGraphEdge();
 
-				$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
-				$post_request = $fb->post('/me/feed', $post_message);
+				#$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
+				#$post_request = $fb->post('/me/feed', $post_message);
 
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
 				// When Graph returns an error
@@ -95,7 +95,7 @@
 				$allFriends = $friends->asArray();
 			}
 
-			
+			echo $allFriends
 
 			// priting basic info about user on the screen
 			#print_r($profile_response);

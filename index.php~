@@ -111,7 +111,10 @@
 			<script type="text/javascript">
 				$(document).ready(function(){
 					$("input[type=Submit]").hide();
+					$("q2").hide();
 					$("input[type=Radio]").click(function(event) {
+					    $("q1").hide();
+					    $("q2").show();
 					    $("input[type=Submit]").show();
 					});
 				});

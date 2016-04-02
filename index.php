@@ -108,13 +108,12 @@
 		<FORM method ="post" action ="Survey.php">
 			
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-			<script type="text/javascript">
+			<script language="javascript">
 				$(document).ready(function(){
+					var q2=document.getElementById("q2")
+					q2.style.display="none";
 					$("input[type=Submit]").hide();
-					$("#q2").style.display = 'none';
 					$("input[type=Radio]").click(function(event) {
-					    $("#q1").style.display = 'none';
-					    $("#q2").style.display = 'block';
 					    $("input[type=Submit]").show();
 					});
 				});

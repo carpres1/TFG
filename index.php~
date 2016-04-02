@@ -119,7 +119,7 @@
 					    $("input[type=Submit]").show();
 					});
 					
-					$("#Next").click(function(){
+					$("#Next").click(function(event){
        						if (!$("input[name='favoritefood']:checked").val()) {
    							
 						}
@@ -156,7 +156,7 @@
 			</div>
 			<button id="hide">Anterior</button>
 			<button id="Next">Siguiente</button>
-			<Input type = "Submit" Name = "Submit1" VALUE = "Siguiente">
+			<Input type = "Submit" Name = "Submit1" VALUE = "Finalizar">
 			
 						
 			

@@ -107,7 +107,7 @@
 			<script language="javascript">
 					var question=1;
 				$(document).ready(function(){
-					var variable=["favoritefood", "restriction", "alergy"];
+					/*var variable=["favoritefood", "restriction", "alergy"];
 					window.alert("question"+question);
 					var q1=document.getElementById("question"+question)
 					$("input[type=Submit]").hide();
@@ -140,6 +140,14 @@
 								window.alert("Para avanzar es necesario dar una resputesta.")
 						}
    					});
+			*/
+					var q1=document.getElementById("q1")
+					var q2=document.getElementById("q2")
+					$("#next").click(function(){
+       						q1.style.display="none";
+						q2.style.display="block";
+   					});
+					
 				});
 			</script>
 			<div id='question1'>

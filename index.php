@@ -110,12 +110,11 @@
 					var q1=document.getElementById("q1")
 					var q2=document.getElementById("q2")
 					q2.style.display="none";
-					/*$("input[type=Submit]").hide();
+					$("input[type=Submit]").hide();
 					$("input[type=Radio]").click(function(event) {
 					    
 					    $("input[type=Submit]").show();
 					});
-					*/
 					$("#Next").click(function(){
        						if (!$("input[name='favoritefood']:checked").val()) {
    							window.alert("Has de elegir alguna opción");

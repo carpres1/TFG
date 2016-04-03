@@ -147,7 +147,7 @@
 					var q1=document.getElementById("question"+question)
 					var q2=document.getElementById("question"+(question+1))
 					$("#next").click(function(){
-       						if($('input[name='variable[question]']').is(':checked')){
+       						if($('input[name='+variable[question]+']').is(':checked')){
 							var q2=document.getElementById("question"+(question+1))
 							question=question+1;
 		       					q1.style.display="none";

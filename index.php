@@ -147,7 +147,9 @@
 					var q1=document.getElementById("question"+question)
 					var q2=document.getElementById("question"+(question+1))
 					$("#next").click(function(){
+						window.alert("anted delif");
        						if($('input[name='+variable[question]+']').is(':checked')){
+							window.alert("despues delif");
 							var q2=document.getElementById("question"+(question+1))
 							question=question+1;
 		       					q1.style.display="none";

@@ -105,7 +105,7 @@
 			
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<script language="javascript">
-					var 
+					var question=0;
 				$(document).ready(function(){
 					var q1=document.getElementById("q1")
 					var q2=document.getElementById("q2")

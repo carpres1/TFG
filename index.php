@@ -113,11 +113,14 @@
 					$("input[type=Submit]").hide();
 					$("input[type=Radio]").click(function(event) {
 					    question=question+1;
-					    window.alert(question);
-					    q2.style.display="block";
-					    q1.style.display="none";
+					    
+					   
 					    $("input[type=Submit]").show();
 					});
+					$("#hide").click(function(){
+       						q1.style.display="none";
+						q2.style.display="block";
+   					});
 				});
 			</script>
 			<div id='q1'>
@@ -142,23 +145,14 @@
 			<Input type = 'Radio' Name ='alergy' value= '4'>Comida Rápida
 			<br></br>
 			</div>
-			</script>
-			<div id='q3'>
-			<p><strong>¿cosas?</strong></p>
-			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana
-			<br></br>
-			<Input type = 'Radio' Name ='favoritefood' value= '2'>Española
-			<br></br>
-			<Input type = 'Radio' Name ='favoritefood' value= '3'>Asiática
-			<br></br>
-			<Input type = 'Radio' Name ='favoritefood' value= '4'>Comida Rápida
-			<br></br>
-			</div>
 			<Input type = "Submit" Name = "Submit1" VALUE = "Finalizar">
 			
 						
 			
 
 		</FORM>
+		<button id="hide">Hide</button>
+		<button id="show">Show</button>
+
 	</body>
 </html>

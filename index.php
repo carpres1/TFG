@@ -110,7 +110,7 @@
 				$(document).ready(function(){
 					$("input[type=Submit]").hide();
 					$("#back").click(function(){
-						if(question>1){
+						if(question>0){
 							var q1=document.getElementById("question"+question)
 							var q0=document.getElementById("question"+(question-1))
 							question=question-1;

@@ -167,19 +167,19 @@
 
 			<div id='question3' style="display: none">
 			<p><strong>¿Eres alergico/sufres intolerancia a alguno de estos alimentos?</strong></p>
-			<Input type = 'Radio' Name ='alergy' value= '1'>Italiana
+			<Input type = 'checkbox' Name ='alergy' value= '1'>Italiana
 			<br></br>
-			<Input type = 'Radio' Name ='alergy' value= '2'>Española
+			<Input type = 'checkbox' Name ='alergy' value= '2'>Española
 			<br></br>
-			<Input type = 'Radio' Name ='alergy' value= '3'>Asiática
+			<Input type = 'checkbox' Name ='alergy' value= '3'>Asiática
 			<br></br>
-			<Input type = 'Radio' Name ='alergy' value= '4'>Comida Rápida
+			<Input type = 'checkbox' Name ='alergy' value= '4'>Comida Rápida
+			<br></br>
 			</div>
 
-			<Input type = "Submit" Name = "Submit1" VALUE = "Finalizar">	
+			<Input type = "Submit"  Name = "Submit1" VALUE = "Finalizar">	
 
 		</FORM>
-		<br></br>
 		<button id="back">Atrás</button>
 		<button id="next">Siguiente</button>
 

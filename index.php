@@ -108,6 +108,7 @@
 				var question=1;
 				var variable=["favoritefood", "restriction", "alergy"];
 				$(document).ready(function(){
+					window.alert("question"+question);
 					var q1=document.getElementById("question"+question);
 					$("input[type=Submit]").hide();
 	
@@ -174,12 +175,12 @@
 			<Input type = 'checkbox' Name ='alergy' value= '3'>Asiática
 			<br></br>
 			<Input type = 'checkbox' Name ='alergy' value= '4'>Comida Rápida
+			<br></br>
 			</div>
 
-			<Input type = "Submit" Name = "Submit1" VALUE = "Finalizar">	
+			<Input type = "Submit"  Name = "Submit1" VALUE = "Finalizar">	
 
 		</FORM>
-		<br></br>
 		<button id="back">Atrás</button>
 		<button id="next">Siguiente</button>
 

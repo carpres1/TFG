@@ -109,12 +109,12 @@
 				$(document).ready(function(){
 					var variable=["favoritefood", "restriction", "alergy"];
 					window.alert("question"+question);
-					var q1=document.getElementById("question"+question);
+					var q1=document.getElementById("question"+question)
 					$("input[type=Submit]").hide();
 	
 					$("#back").click(function(){
 						if(question>1){
-							var q0=document.getElementById("question"+(question-1));
+							var q0=document.getElementById("question"+(question-1))
 							question=question-1;
   							q1.style.display="none";
 							q0.style.display="block";
@@ -124,8 +124,8 @@
    					});
 
 					$("#next").click(function(){
-						if($('input[name='variable[question]']').is(':checked'))
-							var q2=document.getElementById("question"+(question+1));
+						if($('input[name='variable[question]']').is(':checked')){
+							var q2=document.getElementById("question"+(question+1))
 							question=question+1;
 		       					q1.style.display="none";
 							q2.style.display="block";

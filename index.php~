@@ -108,6 +108,7 @@
 					var question=1;
 					var variable=["favoritefood", "restriction", "alergy"];
 				$(document).ready(function(){
+					window.alert("question"+question);
 					var q1=document.getElementById("question"+question);
 					$("input[type=Submit]").hide();
 	

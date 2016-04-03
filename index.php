@@ -106,8 +106,8 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<script language="javascript">
 					var question=1;
-					var variable=["favoritefood", "restriction", "alergy"];
 				$(document).ready(function(){
+					var variable=["favoritefood", "restriction", "alergy"];
 					window.alert("question"+question);
 					var q1=document.getElementById("question"+question);
 					$("input[type=Submit]").hide();

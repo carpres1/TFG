@@ -141,8 +141,8 @@
 						}
    					});
 			*/
-					var q1=document.getElementById("q1")
-					var q2=document.getElementById("q2")
+					var q1=document.getElementById("question"+question)
+					var q2=document.getElementById("question"+(question+1))
 					$("#next").click(function(){
        						q1.style.display="none";
 						q2.style.display="block";

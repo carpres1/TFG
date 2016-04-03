@@ -105,25 +105,43 @@
 			
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<script language="javascript">
-					var question=0;
+				var question=1;
+				var variable=["favoritefood", "restriction", "alergy"];
 				$(document).ready(function(){
-					var q1=document.getElementById("q1")
-					var q2=document.getElementById("q2")
-					q2.style.display="none";
+					var q1=document.getElementById("question"+question);
 					$("input[type=Submit]").hide();
-					$("input[type=Radio]").click(function(event) {
-					    question=question+1;
-					    
-					   
-					    $("input[type=Submit]").show();
-					});
-					$("#hide").click(function(){
-       						q1.style.display="none";
-						q2.style.display="block";
+	
+					$("#back").click(function(){
+						if(question>1){
+							var q0=document.getElementById("question"+(question-1));
+							question=question-1;
+  							q1.style.display="none";
+							q0.style.display="block";
+						}else{
+							window.alert("No es posible retroceder más.");
+						}
+   					});
+
+					$("#next").click(function(){
+						if($('input[name='variable[question]']').is(':checked'))
+							var q2=document.getElementById("question"+(question+1));
+							question=question+1;
+		       					q1.style.display="none";
+							q2.style.display="block";
+							if(question==variable.length){
+								var buttonback=document.getElementById("back");
+								var buttonnext=document.getElementById("next");
+								buttonback.style.display="none";
+								buttonnext.style.display="none";
+								$("input[type=Submit]").show();
+							}
+						}else{
+								window.alert("Para avanzar es necesario dar una resputesta.")
+						}
    					});
 				});
 			</script>
-			<div id='q1'>
+			<div id='question1'>
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
 			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana
 			<br></br>
@@ -131,28 +149,39 @@
 			<br></br>
 			<Input type = 'Radio' Name ='favoritefood' value= '3'>Asiática
 			<br></br>
-			<Input type = 'Radio' Name ='favoritefood' value= '4'>Comida Rápida
+			<Input type = 'Radio' Name ='favoritefood' value= '4'>Latina
 			<br></br>
+			<Input type = 'Radio' Name ='favoritefood' value= '5'>Árabe
+			<br></br>
+			<Input type = 'Radio' Name ='favoritefood' value= '6'>Comida Rápida
 			</div>
-			<div id='q2'>
-			<p><strong>¿alergias?</strong></p>
-			<Input type = 'Radio' Name ='alergy' value= '1'>Italiana
+
+			<div id='question2' style="display: none">
+			<p><strong>¿En cuál de estos grupos te definirías?</strong></p>
+			<Input type = 'Radio' Name ='restriction' value= '1'>omnívoro
 			<br></br>
-			<Input type = 'Radio' Name ='alergy' value= '2'>Española
+			<Input type = 'Radio' Name ='restriction' value= '2'>Vegetariano
 			<br></br>
-			<Input type = 'Radio' Name ='alergy' value= '3'>Asiática
-			<br></br>
-			<Input type = 'Radio' Name ='alergy' value= '4'>Comida Rápida
-			<br></br>
+			<Input type = 'Radio' Name ='restriction' value= '3'>Vegano
 			</div>
-			<Input type = "Submit" Name = "Submit1" VALUE = "Finalizar">
-			
-						
-			
+
+			<div id='question3' style="display: none">
+			<p><strong>¿Eres alergico/sufres intolerancia a alguno de estos alimentos?</strong></p>
+			<Input type = 'checkbox' Name ='alergy' value= '1'>Italiana
+			<br></br>
+			<Input type = 'checkbox' Name ='alergy' value= '2'>Española
+			<br></br>
+			<Input type = 'checkbox' Name ='alergy' value= '3'>Asiática
+			<br></br>
+			<Input type = 'checkbox' Name ='alergy' value= '4'>Comida Rápida
+			</div>
+
+			<Input type = "Submit" Name = "Submit1" VALUE = "Finalizar">	
 
 		</FORM>
-		<button id="hide">Hide</button>
-		<button id="show">Show</button>
+		<br></br>
+		<button id="back">Atrás</button>
+		<button id="next">Siguiente</button>
 
 	</body>
 </html>

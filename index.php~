@@ -108,11 +108,8 @@
 					var question=0;
 					var variable=["favoritefood", "restriction", "alergy"];
 				$(document).ready(function(){
-					/*
-					window.alert("question"+question);
 					var q1=document.getElementById("question"+question)
 					$("input[type=Submit]").hide();
-	
 					$("#back").click(function(){
 						if(question>1){
 							var q0=document.getElementById("question"+(question-1))
@@ -125,12 +122,12 @@
    					});
 
 					$("#next").click(function(){
-						if($('input[name='variable[question]']').is(':checked')){
+						if($('input[name='+variable[question]+']').is(':checked')){
 							var q2=document.getElementById("question"+(question+1))
 							question=question+1;
 		       					q1.style.display="none";
 							q2.style.display="block";
-							if(question==variable.length){
+							if(question==(variable.length-1)){
 								var buttonback=document.getElementById("back");
 								var buttonnext=document.getElementById("next");
 								buttonback.style.display="none";
@@ -139,21 +136,6 @@
 							}
 						}else{
 								window.alert("Para avanzar es necesario dar una resputesta.")
-						}
-   					});
-
-			*/
-					$("input[type=Submit]").hide();
-					var q1=document.getElementById("question"+question)
-					var q2=document.getElementById("question"+(question+1))
-					$("#next").click(function(){
-						window.alert("anted delif");
-       						if($('input[name='+variable[question]+']').is(':checked')){
-							window.alert("despues delif");
-							var q2=document.getElementById("question"+(question+1))
-							question=question+1;
-		       					q1.style.display="none";
-							q2.style.display="block";
 						}
    					});
 					

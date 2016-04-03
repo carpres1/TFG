@@ -108,10 +108,10 @@
 					var question=0;
 					var variable=["favoritefood", "restriction", "alergy"];
 				$(document).ready(function(){
-					var q1=document.getElementById("question"+question)
 					$("input[type=Submit]").hide();
 					$("#back").click(function(){
 						if(question>1){
+							var q1=document.getElementById("question"+question)
 							var q0=document.getElementById("question"+(question-1))
 							question=question-1;
   							q1.style.display="none";
@@ -123,11 +123,12 @@
 
 					$("#next").click(function(){
 						if($('input[name='+variable[question]+']').is(':checked')){
+							var q1=document.getElementById("question"+question)
 							var q2=document.getElementById("question"+(question+1))
 							question=question+1;
 		       					q1.style.display="none";
 							q2.style.display="block";
-							if(question==variable.length){
+							if(question==(variable.length-1)){
 								var buttonback=document.getElementById("back");
 								var buttonnext=document.getElementById("next");
 								buttonback.style.display="none";

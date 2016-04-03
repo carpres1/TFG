@@ -105,7 +105,7 @@
 			
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<script language="javascript">
-					var question=1;
+					var question=0;
 					var variable=["favoritefood", "restriction", "alergy"];
 				$(document).ready(function(){
 					/*
@@ -159,7 +159,7 @@
 					
 				});
 			</script>
-			<div id='question1'>
+			<div id='question0'>
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
 			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana
 			<br></br>
@@ -174,7 +174,7 @@
 			<Input type = 'Radio' Name ='favoritefood' value= '6'>Comida Rápida
 			</div>
 
-			<div id='question2' style="display: none">
+			<div id='question1' style="display: none">
 			<p><strong>¿En cuál de estos grupos te definirías?</strong></p>
 			<Input type = 'Radio' Name ='restriction' value= '1'>omnívoro
 			<br></br>
@@ -183,7 +183,7 @@
 			<Input type = 'Radio' Name ='restriction' value= '3'>Vegano
 			</div>
 
-			<div id='question3' style="display: none">
+			<div id='question2' style="display: none">
 			<p><strong>¿Eres alergico/sufres intolerancia a alguno de estos alimentos?</strong></p>
 			<Input type = 'checkbox' Name ='alergy' value= '1'>Italiana
 			<br></br>

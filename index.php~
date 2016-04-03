@@ -140,7 +140,14 @@
 								window.alert("Para avanzar es necesario dar una resputesta.")
 						}
    					});
+
 			*/
+					$("input[type=Radio]").click(function(event) {
+					    question=question+1;
+					    
+					   
+					    $("input[type=Submit]").show();
+					});
 					var q1=document.getElementById("question"+question)
 					var q2=document.getElementById("question"+(question+1))
 					$("#next").click(function(){

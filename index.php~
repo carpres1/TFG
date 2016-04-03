@@ -142,12 +142,7 @@
    					});
 
 			*/
-					$("input[type=Radio]").click(function(event) {
-					    question=question+1;
-					    
-					   
-					    $("input[type=Submit]").show();
-					});
+					$("input[type=Submit]").hide();
 					var q1=document.getElementById("question"+question)
 					var q2=document.getElementById("question"+(question+1))
 					$("#next").click(function(){

@@ -106,8 +106,9 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<script language="javascript">
 					var question=1;
+					var variable=["favoritefood", "restriction", "alergy"];
 				$(document).ready(function(){
-					/*var variable=["favoritefood", "restriction", "alergy"];
+					/*
 					window.alert("question"+question);
 					var q1=document.getElementById("question"+question)
 					$("input[type=Submit]").hide();
@@ -146,8 +147,12 @@
 					var q1=document.getElementById("question"+question)
 					var q2=document.getElementById("question"+(question+1))
 					$("#next").click(function(){
-       						q1.style.display="none";
-						q2.style.display="block";
+       						if($('input[name='variable[question]']').is(':checked')){
+							var q2=document.getElementById("question"+(question+1))
+							question=question+1;
+		       					q1.style.display="none";
+							q2.style.display="block";
+						}
    					});
 					
 				});

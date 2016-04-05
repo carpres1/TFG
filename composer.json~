@@ -5,12 +5,7 @@
     "type": "library",
     "homepage": "https://github.com/facebook/facebook-php-sdk-v4",
     "license": "Facebook Platform",
-    "authors": [
-        {
-            "name": "Facebook",
-            "homepage": "https://github.com/facebook/facebook-php-sdk-v4/contributors"
-        }
-    ],
+    
     "require": {
         "php": ">=5.4.0",
         "ext-mbstring": "*"
@@ -27,6 +22,6 @@
         "psr-4": {
             "Facebook\\": "src/Facebook/"
         }
-    },
+    }
     
 }

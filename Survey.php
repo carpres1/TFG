@@ -22,7 +22,7 @@ if (!isset($_POST['favoritefood'])){
 		
 
 	}
-$conexion = new MongoClient("mongodb://192.168.1.103");
+$conexion = new MongoDB("mongodb://192.168.1.103");
 echo 'worked';
 echo $favoritefood;
 echo $alergy;

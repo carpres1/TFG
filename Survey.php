@@ -22,6 +22,7 @@ if (!isset($_POST['favoritefood'])){
 		
 
 	}
+phpinfo();
 echo 'worked';
 echo $favoritefood;
 echo $alergy;

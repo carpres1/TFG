@@ -9,7 +9,8 @@
     "require": {
         "php": ">=5.4.0",
         "ext-mbstring": "*",
-	"ext-mongodb": "*"
+	"ext-mongodb": "*",
+	"ext-mongo": "*"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0",

@@ -142,7 +142,7 @@
 					
 				});
 			</script>
-			<div id='question0'>
+			<div id='question0' align="center">
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
 			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana
 			<br></br>
@@ -157,7 +157,7 @@
 			<Input type = 'Radio' Name ='favoritefood' value= '6'>Comida Rápida
 			</div>
 
-			<div id='question1' style="display: none">
+			<div id='question1' style="display: none" align="center">
 			<p><strong>¿En cuál de estos grupos te definirías?</strong></p>
 			<Input type = 'Radio' Name ='restriction' value= '1'>omnívoro
 			<br></br>
@@ -166,7 +166,7 @@
 			<Input type = 'Radio' Name ='restriction' value= '3'>Vegano
 			</div>
 
-			<div id='question2' style="display: none">
+			<div id='question2' style="display: none" align="center">
 			<p><strong>¿Eres alergico/sufres intolerancia a alguno de estos alimentos?</strong></p>
 			<Input type = 'checkbox' Name ='alergy' value= '1'>Italiana
 			<br></br>
@@ -178,12 +178,12 @@
 			<br></br>
 			</div>
 
-			<Input type = "Submit"  Name = "Submit1" VALUE = "Finalizar">
+			<Input type = "Submit" align="center"  Name = "Submit1" VALUE = "Finalizar">
 				
 
 		</FORM>
-		<button id="back">Atrás</button>
-		<button id="next">Siguiente</button>
+		<button id="back" align="left">Atrás</button>
+		<button id="next" align="right">Siguiente</button>
 
 	</body>
 </html>

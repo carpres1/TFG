@@ -23,7 +23,7 @@ if (!isset($_POST['favoritefood'])){
 
 	}
 echo 'worked manager';
-$con = new MongoClient("mongodb://192.168.1.103");
+$con = new MongoClient("mongodb://localhost");
 echo 'worked database connection';
 echo 'worked';
 echo $favoritefood;

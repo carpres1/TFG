@@ -3,11 +3,11 @@
 		<style>
 			.left {
 			   margin: auto;
-			   width: 10%;
+			   width: 80%;
 			}
 			.right {
 			   margin: auto;
-			   width: 90%;
+			   width: -20%;
 			}
 		</style>
 	</head>
@@ -193,8 +193,8 @@
 				
 
 		</FORM>
-		<div class="left"><button id="back">Atrás</button></div>
-		<div class="right"><button id="next">Siguiente</button></div>
+		<div class="right"><button id="back">Atrás</button></div>
+		<div class="left"><button id="next">Siguiente</button></div>
 
 	</body>
 </html>

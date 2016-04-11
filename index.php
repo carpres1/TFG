@@ -131,8 +131,8 @@
 							if(question==(variable.length-1)){
 								var buttonback=document.getElementById("back");
 								var buttonnext=document.getElementById("next");
-								buttonback.style.display="none";
-								buttonnext.style.display="none";
+								//buttonback.style.display="none";
+								//buttonnext.style.display="none";
 								$("input[type=Submit]").show();
 							}
 						}else{
@@ -178,7 +178,8 @@
 			<br></br>
 			</div>
 
-			<Input type = "Submit"  Name = "Submit1" VALUE = "Finalizar">	
+			<Input type = "Submit"  Name = "Submit1" VALUE = "Finalizar">
+				
 
 		</FORM>
 		<button id="back">Atrás</button>

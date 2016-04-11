@@ -178,7 +178,8 @@
 			<br></br>
 			</div>
 
-			<Input type = "Submit"  Name = "Submit1" VALUE = "Finalizar">	
+			<Input type = "Submit"  Name = "Submit1" VALUE = "Finalizar">
+				
 
 		</FORM>
 		<button id="back">Atrás</button>

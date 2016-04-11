@@ -3,11 +3,11 @@
 		<style>
 			.left {
 			   margin: auto;
-			   width: 20%;
+			   width: 10%;
 			}
 			.right {
 			   margin: auto;
-			   width: 70%;
+			   width: 90%;
 			}
 		</style>
 	</head>

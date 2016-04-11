@@ -189,7 +189,7 @@
 			<br></br>
 			</div>
 
-			<Input type = "Submit" Name = "Submit1" VALUE = "Finalizar">
+			<div align="center"><Input type = "Submit" Name = "Submit1" VALUE = "Finalizar"></div>
 				
 
 		</FORM>

@@ -1,5 +1,16 @@
 <html>
-	<head></head>
+	<head>
+		<style>
+			.left {
+			   margin: auto;
+			   width: 20%;
+			}
+			.right {
+			   margin: auto;
+			   width: 70%;
+			}
+		</style>
+	</head>
 	<body>
 		<?php
 		session_start();

@@ -23,7 +23,9 @@ if (!isset($_POST['favoritefood'])){
 
 	}
 $conexion = new MongoDB\Driver\Manager("mongodb://192.168.1.103");
+echo 'worked manager';
 $con = new MongoClient("mongodb://192.168.1.103");
+echo 'worked database connection';
 echo 'worked';
 echo $favoritefood;
 echo $alergy;

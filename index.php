@@ -189,12 +189,12 @@
 			<br></br>
 			</div>
 
-			<Input type = "Submit" align="center"  Name = "Submit1" VALUE = "Finalizar">
+			<div align="center"><Input type = "Submit" Name = "Submit1" VALUE = "Finalizar"></div>
 				
 
 		</FORM>
-		<div align="left"><button id="back">Atrás</button></div>
-		<div align="right"><button id="next">Siguiente</button></div>
+		<div class="left"><button id="back">Atrás</button></div>
+		<div class="right"><button id="next">Siguiente</button></div>
 
 	</body>
 </html>

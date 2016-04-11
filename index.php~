@@ -1,5 +1,16 @@
 <html>
-	<head></head>
+	<head>
+		<style>
+			.left {
+			   margin: auto;
+			   width: 20%;
+			}
+			.right {
+			   margin: auto;
+			   width: 70%;
+			}
+		</style>
+	</head>
 	<body>
 		<?php
 		session_start();
@@ -178,12 +189,12 @@
 			<br></br>
 			</div>
 
-			<Input type = "Submit" align="center"  Name = "Submit1" VALUE = "Finalizar">
+			<Input type = "Submit" Name = "Submit1" VALUE = "Finalizar">
 				
 
 		</FORM>
-		<div align="left"><button id="back">Atrás</button></div>
-		<div align="right"><button id="next">Siguiente</button></div>
+		<div class="left"><button id="back">Atrás</button></div>
+		<div class="right"><button id="next">Siguiente</button></div>
 
 	</body>
 </html>

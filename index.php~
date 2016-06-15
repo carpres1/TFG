@@ -193,8 +193,8 @@
 				
 
 		</FORM>
-		<div class="left"><button id="back">Atrás</button></div>
-		<div class="right"><button id="next">Siguiente</button></div>
+		<button id="back" class="left">Atrás</button>
+		<button id="next" class="right">Siguiente</button>
 
 	</body>
 </html>

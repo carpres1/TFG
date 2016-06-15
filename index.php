@@ -188,13 +188,15 @@
 			<Input type = 'checkbox' Name ='alergy' value= '4'>Comida Rápida
 			<br></br>
 			</div>
-
+			<br></br>
+			<button id="back" align="center">Atrás</button>
+			<button id="next"align="center">Siguiente</button>
+			<br></br>
 			<div align="center"><Input type = "Submit" Name = "Submit1" VALUE = "Finalizar"></div>
 				
 
 		</FORM>
-		<button id="back">Atrás</button>
-		<button id="next">Siguiente</button>
+		
 
 	</body>
 </html>

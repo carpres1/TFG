@@ -11,7 +11,7 @@
 			}
 		</style>
 	</head>
-	<body background="img/background.jpg">
+	<body background="img/m2.jpg">
 		<?php
 		session_start();
 		require_once __DIR__ . '/src/Facebook/autoload.php';

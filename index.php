@@ -194,8 +194,10 @@
 				
 
 		</FORM>
+		<div id='buttons' align="center">
 		<button id="back" align="center">Atrás</button>
 		<button id="next" align="center">Siguiente</button>
+		</div>
 
 	</body>
 </html>

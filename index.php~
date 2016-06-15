@@ -194,8 +194,8 @@
 				
 
 		</FORM>
-		<button id="back" class="left">Atrás</button>
-		<button id="next" class="right">Siguiente</button>
+		<button id="back" align="center">Atrás</button>
+		<button id="next" align="center">Siguiente</button>
 
 	</body>
 </html>

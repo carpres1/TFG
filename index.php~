@@ -1,17 +1,18 @@
 <html>
 	<head>
 		<style>
-			.left {
-			   margin: auto;
-			   width: 80%;
-			}
-			.right {
-			   margin: auto;
-			   width: -20%;
-			}
+
+		.body {
+			background:url(img/m2.jpg) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+		}
+				
 		</style>
 	</head>
-	<body background="img/background.jpg">
+	<body class="body">
 		<?php
 		session_start();
 		require_once __DIR__ . '/src/Facebook/autoload.php';
@@ -188,13 +189,13 @@
 			<Input type = 'checkbox' Name ='alergy' value= '4'>Comida Rápida
 			<br></br>
 			</div>
-			<br></br>
+
 			<div align="center"><Input type = "Submit" Name = "Submit1" VALUE = "Finalizar"></div>
 				
 
 		</FORM>
-		<button id="back" align="center">Atrás</button>
-		<button id="next" align="center">Siguiente</button>
-		
+		<button id="back" class="left">Atrás</button>
+		<button id="next" class="right">Siguiente</button>
+
 	</body>
 </html>

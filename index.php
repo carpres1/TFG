@@ -69,7 +69,7 @@
 			}
 			// getting basic info about user
 			try {
-				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location,user_name');
+				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location,username');
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
 				$request_friends = $fb->get('/me/taggable_friends?fields=user&limit=5000');

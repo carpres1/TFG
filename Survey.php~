@@ -1,5 +1,20 @@
 <?php
 
+$fb = new Facebook\Facebook([
+		  'app_id' => '727092907434360',
+		  'app_secret' => 'c67e09be0ca2199cf4da15486f074fd2',
+		  'default_graph_version' => 'v2.5',
+		]);
+$helper = $fb->getCanvasHelper();
+try {
+$request_friends = $fb->get('/me/taggable_friends?fields=user&limit=5000');
+$friends = $request_friends->getGraphEdge();
+} catch(Facebook\Exceptions\FacebookSDKException $e) {
+	// When validation fails or other local issues
+	echo 'Facebook SDK returned an error: ' . $e->getMessage();
+	exit;
+}
+
 $favoritefood = 0;
 $alergy =0;
 
@@ -22,8 +37,7 @@ if (!isset($_POST['favoritefood'])){
 		
 
 	}
-echo 'worked manager';
-echo 'worked database connection';
+
 echo 'worked';
 echo $favoritefood;
 echo $alergy;

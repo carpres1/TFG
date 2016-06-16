@@ -205,8 +205,8 @@
 			<p><strong>¿Elija a los 3 amigos con los que tenga mayor compatibilidad alimentaria?</strong></p>
 			<br></br>
 			<label>
-  				<input type="radio" name="Cfriend" value=" <?php echo $allFriends[5]['name']; ?> "/>
-  				<img src="<?php echo $allFriends[5]['picture']['url']; ?>">
+  				<input type="radio" name="Cfriend" value=" <?php echo $allFriends[5]['name']; ?> "/><?php echo $allFriends[5]['name']; ?>
+  				<img src="<?php echo $allFriends[5]['picture']['url']; ?>" style='width:100px;height:100px;'>
 			</label>
 			</div>
 

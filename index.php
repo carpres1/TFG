@@ -103,9 +103,9 @@
 				$allFriends = $friends->asArray();
 			}
 
-
+			$foto="https://graph.facebook.com/AaLdVTUQZYSG8-ZiMZ_HomlLQKYsOO1vTiqd5s90wmpiY9SsSy5T-FyeTS7YISqFU1s0boIkYV1yQid5wTKRet0_2ZWccC8_BZsV3KlpMcDJ1A/picture";
 			// priting basic info about user on the screen
-			print_r ($allFriends);
+			print_r ($foto);
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();

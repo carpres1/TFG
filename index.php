@@ -126,7 +126,7 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<script language="javascript">
 					var question=0;
-					var variable=["favoritefood", "restriction", "alergy", "Cfriend"];
+					var variable=["favoritefood", "alergy", "Cfriend"];
 				$(document).ready(function(){
 					$("input[type=Submit]").hide();
 					$("#back").click(function(){

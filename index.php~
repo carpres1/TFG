@@ -112,10 +112,8 @@
 			} else {
 				$allFriends = $friends->asArray();
 			}
-			$random =rand(0,(count($allFriends)-1));
-
 			// priting basic info about user on the screen
-			print_r($random);
+			//print_r($random);
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();
@@ -205,21 +203,30 @@
 			<div id='question3' style="display: none" align="center">
 			<p><strong>Selecciona la foto del amigo con el que tengas mas compatibilidad alimentaria</strong></p>
 			<label>
-				<p><strong><?php echo $allFriends[5]['name']; ?></strong></p>
+				<p><strong>
+					<?php  $random =rand(0,(count($allFriends)-1));
+					 echo $allFriends[$random]['name']; ?>
+				</strong></p>
   				<input type="radio" name="Cfriend" value=" <?php echo $allFriends[5]['name']; ?> "/>
-  				<img src="<?php echo $allFriends[5]['picture']['url']; ?>" style='width:100px;height:100px;'>
+  				<img src="<?php echo $allFriends[$random]['picture']['url']; ?>" style='width:100px;height:100px;'>
 			</label>			
 			<br></br>
 			<label>
-				<p><strong><?php echo $allFriends[5]['name']; ?></strong></p>
+				<p><strong>
+					<?php  $random =rand(0,(count($allFriends)-1));
+					 echo $allFriends[$random]['name']; ?>
+				</strong></p>
   				<input type="radio" name="Cfriend" value=" <?php echo $allFriends[5]['name']; ?> "/>
-  				<img src="<?php echo $allFriends[5]['picture']['url']; ?>" style='width:100px;height:100px;'>
+  				<img src="<?php echo $allFriends[$random]['picture']['url']; ?>" style='width:100px;height:100px;'>
 			</label>	
 			<br></br>
 			<label>
-				<p><strong><?php echo $allFriends[5]['name']; ?></strong></p>
+				<p><strong>
+					<?php  $random =rand(0,(count($allFriends)-1));
+					 echo $allFriends[$random]['name']; ?>
+				</strong></p>
   				<input type="radio" name="Cfriend" value=" <?php echo $allFriends[5]['name']; ?> "/>
-  				<img src="<?php echo $allFriends[5]['picture']['url']; ?>" style='width:100px;height:100px;'>
+  				<img src="<?php echo $allFriends[$random]['picture']['url']; ?>" style='width:100px;height:100px;'>
 			</label>
 			</div>
 

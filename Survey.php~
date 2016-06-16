@@ -25,7 +25,7 @@ if (!isset($_POST['favoritefood'])){
 echo 'worked';
 echo $favoritefood;
 echo $alergy;
-}
+
 require_once __DIR__ . '/src/Facebook/autoload.php';
 		$fb = new Facebook\Facebook([
 		  'app_id' => '727092907434360',

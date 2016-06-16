@@ -72,7 +72,7 @@
 				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location');
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
-				$request_friends = $fb->get('/me/taggable_friends?fields=name,picture&limit=100');
+				$request_friends = $fb->get('/me/taggable_friends?fields=name,picture&height=200');
 				$friends = $request_friends->getGraphEdge();
 
 				#$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
@@ -155,7 +155,8 @@
 			</script>
 			<div id='question0' align="center">
 			
-			<img src=$allFriends[5]["picture"]["url"] alt="some_text"> 
+			<img src=$allFriends[5]["picture"]["url"] alt="some_text">
+			<?php echo "<img src='".$allFriends[5]["picture"]["url"]."'style='width:100px;height:100px;'/>"; ?>
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
 			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana
 			<br></br>

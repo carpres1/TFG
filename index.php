@@ -189,6 +189,16 @@
 			<Input type = 'checkbox' Name ='alergy' value= '4'>Comida Rápida
 			<br></br>
 			</div>
+			
+			<div id='question3' style="display: none" align="center">
+			<p><strong>¿Elija a los 3 amigos con los que tenga mayor compatibilidad alimentaria?</strong></p>
+			<br></br>
+			</div>
+
+			<div id='question4' style="display: none" align="center">
+			<p><strong>¿Elija su comida favorita entre estas opciones?</strong></p>
+			<br></br>
+			</div>
 
 			<div align="center"><Input type = "Submit" Name = "Submit1" VALUE = "Finalizar"></div>
 				

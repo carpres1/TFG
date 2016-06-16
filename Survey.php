@@ -22,8 +22,7 @@ if (!isset($_POST['favoritefood'])){
 		
 
 	}
-echo 'worked manager';
-echo 'worked database connection';
+
 echo 'worked';
 echo $favoritefood;
 echo $alergy;

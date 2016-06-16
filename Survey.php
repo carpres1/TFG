@@ -1,4 +1,33 @@
 <?php
+
+$favoritefood = 0;
+$alergy =0;
+
+
+if (isset($_POST['Submit1'])) {
+if (!isset($_POST['favoritefood'])){
+    		echo "No Language gotten";
+    	return;
+				}
+	$selected_radio = $_POST['favoritefood'];
+	$selected_radio2 = $_POST['alergy'];
+
+	if ($selected_radio == '1') {
+
+		$favoritefood = '1';
+
+	}
+	if ($selected_radio2 == '2') {
+
+		$alergy = 2;
+		
+
+	}
+}
+echo 'worked';
+echo $favoritefood;
+echo $alergy;
+
 session_start();
 require_once __DIR__ . '/src/Facebook/autoload.php';
 		$fb = new Facebook\Facebook([
@@ -35,10 +64,9 @@ require_once __DIR__ . '/src/Facebook/autoload.php';
 				$_SESSION['facebook_access_token'] = (string) $longLivedAccessToken;
 				$fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
 			}
-echo "here";
-$request = $fb->get('/me');
-$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
-$post_request = $fb->post('/me/feed', $post_message);
+		$request = $fb->get('/me');
+		$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
+		$post_request = $fb->post('/me/feed', $post_message);
 } else {
 			$helper = $fb->getRedirectLoginHelper();
 			$loginUrl = $helper->getLoginUrl('https://apps.facebook.com/getting_meaty/', $permissions);

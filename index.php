@@ -145,7 +145,6 @@
 						if($('input[name='+variable[question]+']').is(':checked')){
 							var q1=document.getElementById("question"+question)
 							var q2=document.getElementById("question"+(question+1))
-							question=question+1;
 		       					q1.style.display="none";
 							q2.style.display="block";
 							if(question==(variable.length-1)){
@@ -155,6 +154,7 @@
 								//buttonnext.style.display="none";
 								$("input[type=Submit]").show();
 							}
+							question=question+1;
 						}else{
 								window.alert("Para avanzar es necesario dar una resputesta.")
 						}

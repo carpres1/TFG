@@ -212,6 +212,10 @@
 				<p><strong><?php echo $allFriends[5]['name']; ?></strong></p>
   				<input type="radio" name="Cfriend" value=" <?php echo $allFriends[5]['name']; ?> "/>
   				<img src="<?php echo $allFriends[5]['picture']['url']; ?>" style='width:100px;height:100px;'>
+				<br></br>
+				<p><strong><?php echo $allFriends[5]['name']; ?></strong></p>
+  				<input type="radio" name="Cfriend" value=" <?php echo $allFriends[5]['name']; ?> "/>
+  				<img src="<?php echo $allFriends[5]['picture']['url']; ?>" style='width:100px;height:100px;'>
 			</label>
 			</div>
 

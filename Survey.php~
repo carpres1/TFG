@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__ . '/src/Facebook/autoload.php';
 $favoritefood = 0;
 $alergy =0;
 

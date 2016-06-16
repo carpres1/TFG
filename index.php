@@ -156,7 +156,7 @@
 			<div id='question0' align="center">
 			
 			<img src=$allFriends[5]["picture"]["url"] alt="some_text">
-			<?php $requestedpicture= $fb->get($allFriends[5]["id"]."/picture?&height=200");
+			<?php $requestedpicture= $fb->get("/".$allFriends[5]["id"]."/picture?&height=200");
 				$picture =$requestedpicture->getGraphUser();
 				echo "<img src='".$picture."/>";
 				echo "<img src='".$allFriends[5]["picture"]["url"]."'style='width:100px;height:100px;'/>"; ?>

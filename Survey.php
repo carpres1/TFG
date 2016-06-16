@@ -9,6 +9,7 @@ session_start();
 		]);
 		$helper = $fb->getCanvasHelper();
 try {
+$request = $fb->get('/me');
 $request_friends = $fb->get('/me/taggable_friends?fields=user&limit=5000');
 $friends = $request_friends->getGraphEdge();
 } catch(Facebook\Exceptions\FacebookSDKException $e) {

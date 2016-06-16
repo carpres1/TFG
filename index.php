@@ -126,7 +126,7 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<script language="javascript">
 					var question=0;
-					var variable=["favoritefood", "restriction", "Cfriend"];
+					var variable=["favoritefood", "restriction", "alergy","Cfriend"];
 				$(document).ready(function(){
 					$("input[type=Submit]").hide();
 					$("#back").click(function(){
@@ -145,9 +145,9 @@
 						if(question==2){
 							var q1=document.getElementById("question"+question)
 							var q2=document.getElementById("question"+(question+1))
+							question=question+1;
 		       					q1.style.display="none";
 							q2.style.display="block";
-							question=question+1;
 							}
 						else if($('input[name='+variable[question]+']').is(':checked')){
 							var q1=document.getElementById("question"+question)

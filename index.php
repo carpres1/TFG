@@ -155,7 +155,7 @@
 			</script>
 			<div id='question0' align="center">
 			<?php   $name=$allFriends[5]["name"];
-				echo "<img src='".$allFriends[5]["picture"]["url"]."' alt=""".$name.""" style='width:100px;height:100px;'/>"; ?>
+				echo "<img src='".$allFriends[5]["picture"]["url"]."' alt='".$name."' style='width:100px;height:100px;'/>"; ?>
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
 			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana
 			<br></br>

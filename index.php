@@ -202,9 +202,17 @@
 			</div>
 			
 			<div id='question3' style="display: none" align="center">
-			<p><strong>¿Elija a los 3 amigos con los que tenga mayor compatibilidad alimentaria?</strong></p>
+			<p><strong>Selecciona la foto del amigo con el que tengas mas compatibilidad alimentaria</strong></p>
 			<br></br>
 			<label>
+				<p><strong><?php echo $allFriends[5]['name']; ?></strong></p>
+  				<input type="radio" name="Cfriend" value=" <?php echo $allFriends[5]['name']; ?> "/>
+  				<img src="<?php echo $allFriends[5]['picture']['url']; ?>" style='width:100px;height:100px;'>
+				<br></br>
+				<p><strong><?php echo $allFriends[5]['name']; ?></strong></p>
+  				<input type="radio" name="Cfriend" value=" <?php echo $allFriends[5]['name']; ?> "/>
+  				<img src="<?php echo $allFriends[5]['picture']['url']; ?>" style='width:100px;height:100px;'>
+				<br></br>
 				<p><strong><?php echo $allFriends[5]['name']; ?></strong></p>
   				<input type="radio" name="Cfriend" value=" <?php echo $allFriends[5]['name']; ?> "/>
   				<img src="<?php echo $allFriends[5]['picture']['url']; ?>" style='width:100px;height:100px;'>

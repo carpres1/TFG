@@ -69,7 +69,7 @@
 			}
 			// getting basic info about user
 			try {
-				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location');
+				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location,user_name');
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
 				$request_friends = $fb->get('/me/taggable_friends?fields=user&limit=5000');
@@ -105,7 +105,7 @@
 
 
 			// priting basic info about user on the screen
-			#print_r($profile_response);
+			print_r($profile_response);
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();

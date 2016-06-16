@@ -104,7 +104,7 @@
 			}
 
 			// priting basic info about user on the screen
-			echo "<img src='".$allFriends[5]["id"]["url"]."'style='width:100px;height:100px;'/>";
+			//echo "<img src='".$allFriends[5]["id"]["url"]."'style='width:100px;height:100px;'/>";
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();
@@ -155,13 +155,12 @@
 			</script>
 			<div id='question0' align="center">
 			
-			<img src=$allFriends[5]["picture"]["url"] alt="some_text">
 			<?php 
 				print("/".$allFriends[5]["id"]."/picture?&height=200");
 				$requestedpicture= $fb->get("/me/picture?&height=200");
 				$picture =$requestedpicture->getGraphUser();
 				echo "<img src='".$picture."/>";
-				echo "<img src='".$allFriends[5]["picture"]["url"]."'style='width:100px;height:100px;'/>"; ?>
+				//echo "<img src='".$allFriends[5]["picture"]["url"]."'style='width:100px;height:100px;'/>"; ?>
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
 			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana
 			<br></br>

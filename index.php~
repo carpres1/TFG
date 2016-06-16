@@ -72,7 +72,7 @@
 				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location');
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
-				$request_friends = $fb->get('/me/taggable_friends?fields=name,username');
+				$request_friends = $fb->get('/me/taggable_friends?fields=name,picture&limit=100');
 				$friends = $request_friends->getGraphEdge();
 
 				#$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
@@ -103,9 +103,9 @@
 				$allFriends = $friends->asArray();
 			}
 
-
+			$foto="https://graph.facebook.com/AaLdVTUQZYSG8-ZiMZ_HomlLQKYsOO1vTiqd5s90wmpiY9SsSy5T-FyeTS7YISqFU1s0boIkYV1yQid5wTKRet0_2ZWccC8_BZsV3KlpMcDJ1A/picture";
 			// priting basic info about user on the screen
-			print_r ($allFriends);
+			print_r ($foto);
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();

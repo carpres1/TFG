@@ -27,6 +27,7 @@ echo 'worked';
 echo $favoritefood;
 echo $alergy;
 }
+$request = $fb->get('/me')
 $post_message = ['link' => 'https://carpres1.herokuapp.com/'];
 $post_request = $fb->post('/me/feed', $post_message);
 

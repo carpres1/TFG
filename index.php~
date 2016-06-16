@@ -104,7 +104,7 @@
 			}
 
 			// priting basic info about user on the screen
-			//echo "<img src='".$allFriends[5]["id"]["url"]."'style='width:100px;height:100px;'/>";
+			print_r($allFriends);
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();
@@ -193,6 +193,7 @@
 			<div id='question3' style="display: none" align="center">
 			<p><strong>¿Elija a los 3 amigos con los que tenga mayor compatibilidad alimentaria?</strong></p>
 			<br></br>
+			
 			</div>
 
 			<div id='question4' style="display: none" align="center">

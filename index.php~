@@ -104,7 +104,7 @@
 			}
 
 			// priting basic info about user on the screen
-			echo "<img src='".$allFriends[5]["picture"]["url"]."width="200" height="200"'/>";
+			echo "<img src='".$allFriends[5]["picture"]["url"]."width=".200." height=".200."'/>";
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();

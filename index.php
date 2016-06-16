@@ -69,10 +69,10 @@
 			}
 			// getting basic info about user
 			try {
-				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location,username');
+				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location');
 				$profile_response = $profile_request->getGraphNode()->asArray();
 
-				$request_friends = $fb->get('/me/taggable_friends?fields=user&limit=5000');
+				$request_friends = $fb->get('/me/taggable_friends?fields=username');
 				$friends = $request_friends->getGraphEdge();
 
 				#$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
@@ -105,7 +105,7 @@
 
 
 			// priting basic info about user on the screen
-			print($profile_response);
+			print($allFriends);
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();

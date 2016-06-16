@@ -27,7 +27,7 @@ if ($fb->next($friends)) {
 } else {
 	$allFriends = $friends->asArray();
 }
- echo $allFriends			
+ echo $allFriends;			
 
 $favoritefood = 0;
 $alergy =0;

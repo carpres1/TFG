@@ -1,11 +1,13 @@
 <?php
 
-$fb = new Facebook\Facebook([
+session_start();
+		require_once __DIR__ . '/src/Facebook/autoload.php';
+		$fb = new Facebook\Facebook([
 		  'app_id' => '727092907434360',
 		  'app_secret' => 'c67e09be0ca2199cf4da15486f074fd2',
 		  'default_graph_version' => 'v2.5',
 		]);
-$helper = $fb->getCanvasHelper();
+		$helper = $fb->getCanvasHelper();
 try {
 $request_friends = $fb->get('/me/taggable_friends?fields=user&limit=5000');
 $friends = $request_friends->getGraphEdge();

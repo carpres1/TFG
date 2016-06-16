@@ -115,7 +115,7 @@
 			$random =rand(0,(count($allFriends)-1));
 
 			// priting basic info about user on the screen
-			print_r(random);
+			print_r($random);
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();

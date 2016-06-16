@@ -105,7 +105,7 @@
 
 
 			// priting basic info about user on the screen
-			print($allFriends[3]);
+			print_r ($allFriends);
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();

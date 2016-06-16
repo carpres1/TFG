@@ -146,7 +146,9 @@
 							var q1=document.getElementById("question"+question)
 							var q2=document.getElementById("question"+(question+1))
 		       					q1.style.display="none";
-							q2.style.display="block";}
+							q2.style.display="block";
+							question=question+1;
+							}
 						else if($('input[name='+variable[question]+']').is(':checked')){
 							var q1=document.getElementById("question"+question)
 							var q2=document.getElementById("question"+(question+1))

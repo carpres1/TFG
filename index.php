@@ -1,9 +1,19 @@
 <html>
 	<head>
 		<style>
-
+			label > input{ /* HIDE RADIO */
+ 				 visibility: hidden; /* Makes input not-clickable */
+  				position: absolute; /* Remove input from document flow */
+			}
+			label > input + img{ /* IMAGE STYLES */
+  				cursor:pointer;
+ 				border:2px solid transparent;
+			}
+			label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+			  border:2px solid #f00;
+			}
 		.body {
-			background:url(img/m2.jpg) no-repeat center center fixed;
+			background:url(img/background.jpg) no-repeat center center fixed;
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
 			-o-background-size: cover;
@@ -194,7 +204,11 @@
 			<div id='question3' style="display: none" align="center">
 			<p><strong>¿Elija a los 3 amigos con los que tenga mayor compatibilidad alimentaria?</strong></p>
 			<br></br>
-			
+			<label>
+  				<?php "<input type='radio' name='Cfriend' value=".$allFriends[5]["name"]."/>".$allFriends[5]["name"]."
+  				<img src=".$allFriends[5]["picture"]["url"].">"
+				?>
+			</label>
 			</div>
 
 			<div id='question4' style="display: none" align="center">

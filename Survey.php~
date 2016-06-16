@@ -60,5 +60,9 @@ require_once __DIR__ . '/src/Facebook/autoload.php';
 $request = $fb->get('/me');
 $post_message = ['link' => 'https://carpres1.herokuapp.com/'];
 $post_request = $fb->post('/me/feed', $post_message);
-
+} else {
+			$helper = $fb->getRedirectLoginHelper();
+			$loginUrl = $helper->getLoginUrl('https://apps.facebook.com/getting_meaty/', $permissions);
+			echo "<script>window.top.location.href='".$loginUrl."'</script>";
+		}
 ?>

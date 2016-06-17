@@ -216,7 +216,8 @@
 			<label>
 				<p><strong>
 					<?php $random =rand(0,(count($allFriends)-1));
-						$answer=$_GET[restriction];
+						$answer=$_GET["restriction"];
+						echo $answer;
 						if($answer==1){
 					 		echo $allFriends[$random]['name'];
 						}

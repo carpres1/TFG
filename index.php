@@ -151,7 +151,9 @@
 							}
 						else if($('input[name='+variable[question]+']').is(':checked')){
 							if(question==0 || question==1){
+								window.alert("hasta aqui llego");
 								<?php echo "hola"; ?>
+								window.alert(" aqui no llego");
 							}
 							var q1=document.getElementById("question"+question)
 							var q2=document.getElementById("question"+(question+1))

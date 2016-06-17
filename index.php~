@@ -216,7 +216,10 @@
 			<label>
 				<p><strong>
 					<?php $random =rand(0,(count($allFriends)-1));
-					 echo $allFriends[$random]['name'];echo"hola"; echo $answer; ?>
+						if($answer==true){
+					 		echo $allFriends[$random]['name'];
+						}
+					 ?>
 				</strong></p>
   				<input type="radio" name="Cfriend" value=" <?php echo $allFriends[5]['name']; ?> "/>
   				<img src="<?php echo $allFriends[$random]['picture']['url']; ?>" style='width:100px;height:100px;'>

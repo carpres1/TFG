@@ -152,7 +152,7 @@
 						else if($('input[name='+variable[question]+']').is(':checked')){
 							if(question==0 || question==1){
 								window.alert("hasta aqui llego");
-								$answer=$('input[name='+variable[question]+']')
+								$answer=$_POST['favoritefood'];
 								window.alert($answer);
 							}
 							var q1=document.getElementById("question"+question)
@@ -214,7 +214,7 @@
 			<p><strong>Selecciona la foto del amigo con el que tengas mas compatibilidad alimentaria</strong></p>
 			<label>
 				<p><strong>
-					<?php  $random =rand(0,(count($allFriends)-1));
+					<?php  echo $answer;$random =rand(0,(count($allFriends)-1));
 					 echo $allFriends[$random]['name']; ?>
 				</strong></p>
   				<input type="radio" name="Cfriend" value=" <?php echo $allFriends[5]['name']; ?> "/>

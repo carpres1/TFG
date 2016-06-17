@@ -152,7 +152,7 @@
 						else if($('input[name='+variable[question]+']').is(':checked')){
 							if(question==0 || question==1){
 								window.alert("hasta aqui llego");
-								$answer=$_POST['favoritefood'];
+								$answer=$('input[name='+variable[question]+']').value()
 								window.alert($answer);
 							}
 							var q1=document.getElementById("question"+question)

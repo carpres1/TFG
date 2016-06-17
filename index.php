@@ -126,7 +126,7 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<script language="javascript">
 					var question=0;
-					var variable=["favoritefood", "restriction", "alergy","Cfriend"];
+					var variable=["favoritefood", "restriction", "alergy","Cfriend", "Ffood1"];
 				$(document).ready(function(){
 					$("input[type=Submit]").hide();
 					$("#back").click(function(){
@@ -151,7 +151,6 @@
 							}
 						else if($('input[name='+variable[question]+']').is(':checked')){
 							if(question==0 || question==1){
-								<script language="php">echo "hola";</script>
 									}
 									
 							}
@@ -162,8 +161,6 @@
 							if(question==(variable.length-1)){
 								var buttonback=document.getElementById("back");
 								var buttonnext=document.getElementById("next");
-								//buttonback.style.display="none";
-								//buttonnext.style.display="none";
 								$("input[type=Submit]").show();
 							}
 							question=question+1;
@@ -215,10 +212,7 @@
 			<label>
 				<p><strong>
 					<?php $random =rand(0,(count($allFriends)-1));
-						$answer=$_POST["restriction"];
-						echo $answer;
-						if($answer==1){
-					 		echo $allFriends[$random]['name'];
+					 	echo $allFriends[$random]['name'];
 						}
 					 ?>
 				</strong></p>

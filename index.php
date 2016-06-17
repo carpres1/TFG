@@ -112,9 +112,18 @@
 			} else {
 				$allFriends = $friends->asArray();
 			}
-			// priting basic info about user on the screen
-			//print_r($random);
-		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
+
+			/*// connect
+			$m = new MongoClient();
+			// select a database
+			$db = $m->tfg; 
+			// select a collection (analogous to a relational database's table)
+			$collection = $db->foods;
+			$cursor = $collection->find();
+			$number= count(iterator_to_array($cursor));
+			$food=iterator_to_array($cursor, false);
+			*/
+		// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
 		} else {
 			$helper = $fb->getRedirectLoginHelper();
 			$loginUrl = $helper->getLoginUrl('https://apps.facebook.com/getting_meaty/', $permissions);
@@ -126,7 +135,7 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<script language="javascript">
 					var question=0;
-					var variable=["favoritefood", "restriction", "alergy","Cfriend", "Ffood1"];
+					var variable=["favoritefood", "restriction", "alergy","Cfriend"];
 				$(document).ready(function(){
 					$("input[type=Submit]").hide();
 					$("#back").click(function(){
@@ -232,20 +241,7 @@
   				<input type="radio" name="Cfriend" value=" <?php echo $allFriends[5]['name']; ?> "/>
   				<img src="<?php echo $allFriends[$random]['picture']['url']; ?>" style='width:100px;height:100px;'>
 			</label>
-			</div>
-			
-			<?php
-				// connect
-				$m = new MongoClient();
-				// select a database
-				$db = $m->tfg; 
-				// select a collection (analogous to a relational database's table)
-				$collection = $db->foods;
-				$cursor = $collection->find();
-				$number= count(iterator_to_array($cursor));
-				$food=iterator_to_array($cursor, false);
-				echo $number;
-			?>			
+			</div>			
 
 			<div id='question4' style="display: none" align="center">
 			<p><strong>¿Elija su comida favorita entre estas opciones?</strong></p>

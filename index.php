@@ -168,12 +168,6 @@
 				});
 			</script>
 			<div id='question0' align="center">
-			<?php 
-				echo "hola"; $nombre= "<script language='javascript'>
-						document.getElementById('favoritefood').is(':checked')
-						</script>"; 
-				print_r($nombre);
-			 ?>
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
 			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana
 			<br></br>
@@ -239,10 +233,44 @@
   				<img src="<?php echo $allFriends[$random]['picture']['url']; ?>" style='width:100px;height:100px;'>
 			</label>
 			</div>
+			
+				// connect
+				$m = new MongoClient();
+				// select a database
+				$db = $m->tfg; 
+				// select a collection (analogous to a relational database's table)
+				$collection = $db->foods;
+				$cursor = $collection->find();
+				$number= count(iterator_to_array($cursor));
+				$food=iterator_to_array($cursor, false);
+				echo $number;			
 
 			<div id='question4' style="display: none" align="center">
-			<p><strong>¿Elija su comida favorita entre estas opciones?</strong></p>
+			<p><strong>¿Elija su comida favorita entre estas opciones hola?</strong></p>
+			<label>
+				<p><strong>
+					<?php $random =rand(0,($number-1));
+					 	echo $food[$random]["name"];
+					 ?>
+				</strong></p>
+  				<input type="radio" name="Ffood1" value=" <?php echo $food[$random]['name']; ?> "/>
+  				<img src="<?php echo 'img/Foods/'.$food[$random]['code'].'jpg'; ?>">
+			</label>			
 			<br></br>
+			<label>
+				<p><strong>Ninguno</strong></p>
+  				<input type="radio" name="Ffood1" value="Ninguno"/>
+  				<img src="<?php echo 'img/Foods/nasty.jpg'; ?>">
+			</label>	
+			<br></br>
+			<label>
+				<p><strong>
+					<?php  $random =rand(0,($number-1));
+					 echo $food[$random]["name"]; ?>
+				</strong></p>
+  				<input type="radio" name="Ffood1" value=" <?php echo $food[$random]['name']; ?> "/>
+  				<img src="<?php echo 'img/Foods/'.$food[$random]['code'].'jpg'; ?>">
+			</label>
 			</div>
 
 			<div align="center"><Input type = "Submit" Name = "Submit1" VALUE = "Finalizar"></div>

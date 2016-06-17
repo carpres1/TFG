@@ -151,10 +151,11 @@
 							}
 						else if($('input[name='+variable[question]+']').is(':checked')){
 							if(question==0 || question==1){
-								var actual=document.getElementById("question"+question)
-								window.alert(actual);
-								$answer=actual.value;
-								window.alert($answer);
+								if($('input[name='+variable[question]+']'[0]).is(':checked')){
+								
+										window.alert("true");
+									}
+									
 							}
 							var q1=document.getElementById("question"+question)
 							var q2=document.getElementById("question"+(question+1))

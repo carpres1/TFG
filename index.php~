@@ -151,7 +151,7 @@
 							}
 						else if($('input[name='+variable[question]+']').is(':checked')){
 							if(question==0 || question==1){
-								""<?php ?>""
+								<?php echo "hola"; ?>
 							}
 							var q1=document.getElementById("question"+question)
 							var q2=document.getElementById("question"+(question+1))

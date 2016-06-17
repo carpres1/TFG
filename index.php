@@ -124,7 +124,7 @@
 		<FORM method ="post" action ="Survey.php">
 			
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-			<JavaScript>
+			<script language="javascript">
 					var question=0;
 					var variable=["favoritefood", "restriction", "alergy","Cfriend"];
 				$(document).ready(function(){
@@ -171,7 +171,7 @@
    					});
 					
 				});
-			</JavaScript>
+			</script>
 			<div id='question0' align="center">
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
 			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana

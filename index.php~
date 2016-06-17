@@ -161,8 +161,6 @@
 							if(question==(variable.length-1)){
 								var buttonback=document.getElementById("back");
 								var buttonnext=document.getElementById("next");
-								//buttonback.style.display="none";
-								//buttonnext.style.display="none";
 								$("input[type=Submit]").show();
 							}
 							question=question+1;

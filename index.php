@@ -213,7 +213,6 @@
 				<p><strong>
 					<?php $random =rand(0,(count($allFriends)-1));
 					 	echo $allFriends[$random]['name'];
-						}
 					 ?>
 				</strong></p>
   				<input type="radio" name="Cfriend" value=" <?php echo $allFriends[5]['name']; ?> "/>

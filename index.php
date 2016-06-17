@@ -215,8 +215,8 @@
 			<p><strong>Selecciona la foto del amigo con el que tengas mas compatibilidad alimentaria</strong></p>
 			<label>
 				<p><strong>
-					<?php print_r( "hola"); print_r( $answer);$random =rand(0,(count($allFriends)-1));
-					 echo $allFriends[$random]['name']; ?>
+					<?php $random =rand(0,(count($allFriends)-1));
+					 echo $allFriends[$random]['name'];echo"hola"; echo $answer; ?>
 				</strong></p>
   				<input type="radio" name="Cfriend" value=" <?php echo $allFriends[5]['name']; ?> "/>
   				<img src="<?php echo $allFriends[$random]['picture']['url']; ?>" style='width:100px;height:100px;'>

@@ -8,7 +8,7 @@
 		$selected_radio2 = $_POST['alergy'];
 		
 
-		}
+		
 	}
 	echo 'worked';
 	echo $selected_radio;

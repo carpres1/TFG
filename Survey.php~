@@ -1,6 +1,5 @@
 <?php
 	if (isset($_POST['Submit1'])) {
-		for(){}
 	if (!isset($_POST['favoritefood'])){
 	    		echo "No Language gotten";
 	    	return;

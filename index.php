@@ -185,7 +185,7 @@
 			<div id='question1' style="display: none" align="center">
 			<?php 
 				echo "hola"; $nombre= "<script language='javascript'>
-						document.getElementByName('favoritefood').value
+						document.getElementById('favoritefood').is(':checked')
 						</script>"; 
 				print_r($nombre);
 			 ?>

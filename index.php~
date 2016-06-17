@@ -187,7 +187,7 @@
 				echo "hola"; $nombre= "<script language='javascript'>
 						document.getElementByName('favoritefood').value
 						</script>"; 
-				echo $number;
+				echo $nombre;
 			 ?>
 			<p><strong>¿En cuál de estos grupos te definirías?</strong></p>
 			<Input type = 'Radio' Name ='restriction' value= '1'>omnívoro

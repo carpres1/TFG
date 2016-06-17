@@ -124,9 +124,9 @@
 		<FORM method ="post" action ="Survey.php">
 			
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-			<script language="javascript">
+			<JavaScript>
 					var question=0;
-					var variable=["favoritefood", "restriction", "Allergy","Cfriend"];
+					var variable=["favoritefood", "restriction", "alergy","Cfriend"];
 				$(document).ready(function(){
 					$("input[type=Submit]").hide();
 					$("#back").click(function(){
@@ -150,6 +150,9 @@
 							q2.style.display="block";
 							}
 						else if($('input[name='+variable[question]+']').is(':checked')){
+							if(question==0 || question==1){
+								""<?php ?>""
+							}
 							var q1=document.getElementById("question"+question)
 							var q2=document.getElementById("question"+(question+1))
 		       					q1.style.display="none";
@@ -168,7 +171,7 @@
    					});
 					
 				});
-			</script>
+			</JavaScript>
 			<div id='question0' align="center">
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
 			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana

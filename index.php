@@ -168,6 +168,12 @@
 				});
 			</script>
 			<div id='question0' align="center">
+			<?php 
+				echo "hola"; $nombre= "<script language='javascript'>
+						document.getElementById('favoritefood').is(':checked')
+						</script>"; 
+				print_r($nombre);
+			 ?>
 			<p><strong>¿Cuál de los siguientes tipos de comida es tu favorita?</strong></p>
 			<Input type = 'Radio' Name ='favoritefood' value= '1'>Italiana
 			<br></br>
@@ -183,12 +189,6 @@
 			</div>
 
 			<div id='question1' style="display: none" align="center">
-			<?php 
-				echo "hola"; $nombre= "<script language='javascript'>
-						document.getElementById('favoritefood').is(':checked')
-						</script>"; 
-				print_r($nombre);
-			 ?>
 			<p><strong>¿En cuál de estos grupos te definirías?</strong></p>
 			<Input type = 'Radio' Name ='restriction' value= '1'>omnívoro
 			<br></br>

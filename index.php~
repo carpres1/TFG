@@ -184,7 +184,7 @@
 
 			<div id='question1' style="display: none" align="center">
 			<?php 
-				$nombre= "<script language='javascript'>
+				echo "hola"; $nombre= "<script language='javascript'>
 						document.getElementByName('favoritefood').value
 						</script>"; 
 				echo $number;

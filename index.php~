@@ -150,9 +150,6 @@
 							q2.style.display="block";
 							}
 						else if($('input[name='+variable[question]+']').is(':checked')){
-							if(question==0 || question==1){
-									
-							}
 							var q1=document.getElementById("question"+question)
 							var q2=document.getElementById("question"+(question+1))
 		       					q1.style.display="none";

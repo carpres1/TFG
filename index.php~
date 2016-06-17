@@ -112,17 +112,6 @@
 			} else {
 				$allFriends = $friends->asArray();
 			}
-
-			// connect
-			$m = new MongoClient();
-			// select a database
-			$db = $m->tfg; 
-			// select a collection (analogous to a relational database's table)
-			$collection = $db->foods;
-			$cursor = $collection->find();
-			$number= count(iterator_to_array($cursor));
-			$food=iterator_to_array($cursor, false);
-			echo $number;	
 			// priting basic info about user on the screen
 			//print_r($random);
 		  	// Now you can redirect to another page and use the access token from $_SESSION['facebook_access_token']
@@ -244,10 +233,20 @@
   				<img src="<?php echo $allFriends[$random]['picture']['url']; ?>" style='width:100px;height:100px;'>
 			</label>
 			</div>
-					
+			
+				// connect
+				$m = new MongoClient();
+				// select a database
+				$db = $m->tfg; 
+				// select a collection (analogous to a relational database's table)
+				$collection = $db->foods;
+				$cursor = $collection->find();
+				$number= count(iterator_to_array($cursor));
+				$food=iterator_to_array($cursor, false);
+				echo $number;			
 
 			<div id='question4' style="display: none" align="center">
-			<p><strong>¿Elija su comida favorita entre estas opciones?</strong></p>
+			<p><strong>¿Elija su comida favorita entre estas opciones hola?</strong></p>
 			<label>
 				<p><strong>
 					<?php $random =rand(0,($number-1));

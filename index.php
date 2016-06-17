@@ -234,6 +234,7 @@
 			</label>
 			</div>
 			
+			<?php
 				// connect
 				$m = new MongoClient();
 				// select a database
@@ -243,10 +244,11 @@
 				$cursor = $collection->find();
 				$number= count(iterator_to_array($cursor));
 				$food=iterator_to_array($cursor, false);
-				echo $number;			
+				echo $number;
+			?>			
 
 			<div id='question4' style="display: none" align="center">
-			<p><strong>¿Elija su comida favorita entre estas opciones hola?</strong></p>
+			<p><strong>¿Elija su comida favorita entre estas opciones?</strong></p>
 			<label>
 				<p><strong>
 					<?php $random =rand(0,($number-1));

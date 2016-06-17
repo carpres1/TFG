@@ -152,8 +152,7 @@
 						else if($('input[name='+variable[question]+']').is(':checked')){
 							if(question==0 || question==1){
 								if($('input[name='+variable[question]+']'[0]).is(':checked')){
-								
-										window.alert("true");
+									$answer=0;
 									}
 									
 							}

@@ -12,7 +12,7 @@
 		
 	}
 	for($i=1; $i<6; $i++){
-		$answer='$selected_radio'.$i)
+		$answer='$selected_radio'.$i;
 		echo $answer;
 	}
 

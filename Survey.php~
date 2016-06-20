@@ -13,7 +13,7 @@
 	}
 	for($i=1; $i<6; $i++){
 		$answer='$selected_radio'.$i)
-		echo ;
+		echo $answer;
 	}
 
 	session_start();

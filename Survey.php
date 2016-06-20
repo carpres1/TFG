@@ -55,7 +55,7 @@
 		try{
 			$request = $fb->get('/me');
 
-			$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location,birthday_date');
+			$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location,birthday&');
 			$profile_response = $profile_request->getGraphNode()->asArray();
 			print_r($profile_response);
 			//$post_message = ['link' => 'https://carpres1.herokuapp.com/'];

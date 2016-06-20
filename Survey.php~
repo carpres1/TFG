@@ -70,7 +70,7 @@
 			$db = $m->tfg; 
 			// select a collection (analogous to a relational database's table)
 			$collection = $db->users;
-			$document = array( "code" =>"" "name" => "", "surname" => "", "gender" => "", "email" => "", "location" =>"", "hometown" =>"", "qfavorite" =>"", "qrestriction" =>"" , "qalergy" =>"", "qfriend" =>"", "qfood1" =>"");
+			$document = array( "code" =>"" "name" => "", "surname" => "", "gender" => "", "email" => "", "location" =>"", "hometown" =>"", "qfavorite" =>"", "qrestriction" =>"" , "qalergy" =>"", "qfriend" =>array(), "qfood1" =>array());
 $collection->insert($document);
 			*/
 

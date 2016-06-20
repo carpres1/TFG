@@ -1,6 +1,6 @@
 <?php
 	if (isset($_POST['Submit1'])) {
-		$selected_radio = $_POST['favoritefood'];
+		$selected_radio1 = $_POST['favoritefood'];
 		$selected_radio2 = $_POST['favoritefood'];
 		if (!isset($_POST['alergy'])){
 	    		$selected_radio3 ="null";
@@ -8,8 +8,11 @@
 			$selected_radio3 = $_POST['alergy'];
 		}
 		$selected_radio4 = $_POST['Cfriend'];
-		$selected_radio4 = $_POST['Ffood1'];
+		$selected_radio5 = $_POST['Ffood1'];
 		
+	}
+	for($i=1; $i<6; $i++){
+		echo ($selected_radio."".$i);
 	}
 
 	session_start();

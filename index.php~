@@ -79,8 +79,7 @@
 			}
 			// getting basic info about user
 			try {
-				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location');
-				$profile_response = $profile_request->getGraphNode()->asArray();
+				
 
 				$request_friends = $fb->get('/me/taggable_friends?fields=name,picture&limit=100');
 				$friends = $request_friends->getGraphEdge();
@@ -100,7 +99,7 @@
 				exit;
 			}
 
-			//As the page of friends hasa maximumthis methods gets all the friends in the same array
+			//As the page of friends has a maximumt his methods gets all the friends in the same array
 			if ($fb->next($friends)) {
 				$allFriends = array();
 				$friendsArray = $friends->asArray();
@@ -135,7 +134,7 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<script language="javascript">
 					var question=0;
-					var variable=["favoritefood", "restriction", "alergy","Cfriend", "Ffood1"];
+					var variable=["favoritefood", "restriction", "alergy","Cfriend"];
 				$(document).ready(function(){
 					$("input[type=Submit]").hide();
 					$("#back").click(function(){
@@ -202,13 +201,13 @@
 
 			<div id='question2' style="display: none" align="center">
 			<p><strong>¿Eres alergico/sufres intolerancia a alguno de estos alimentos?</strong></p>
-			<Input type = 'checkbox' Name ='alergy' value= '1'>Italiana
+			<Input type = 'checkbox' Name ='alergy' value= '1'>Lactosa
 			<br></br>
-			<Input type = 'checkbox' Name ='alergy' value= '2'>Española
+			<Input type = 'checkbox' Name ='alergy' value= '2'>Cereales
 			<br></br>
-			<Input type = 'checkbox' Name ='alergy' value= '3'>Asiática
+			<Input type = 'checkbox' Name ='alergy' value= '3'>Huevos
 			<br></br>
-			<Input type = 'checkbox' Name ='alergy' value= '4'>Comida Rápida
+			<Input type = 'checkbox' Name ='alergy' value= '4'>Otras
 			<br></br>
 			</div>
 			

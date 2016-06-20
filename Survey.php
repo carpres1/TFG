@@ -1,18 +1,16 @@
 <?php
 	if (isset($_POST['Submit1'])) {
-		if (!isset($_POST['alergy'])){
-	    		echo "No Language gotten";
-	    	return;
-					}
 		$selected_radio = $_POST['favoritefood'];
-		$selected_radio2 = $_POST['alergy'];
-		
-
+		$selected_radio2 = $_POST['favoritefood'];
+		if (!isset($_POST['alergy'])){
+	    		$selected_radio3 ="null";
+	    	}else{
+			$selected_radio3 = $_POST['alergy'];
+		}
+		$selected_radio4 = $_POST['Cfriend'];
+		$selected_radio4 = $_POST['Ffood1'];
 		
 	}
-	echo 'worked';
-	echo $selected_radio;
-	echo $alergy;
 
 	session_start();
 	require_once __DIR__ . '/src/Facebook/autoload.php';
@@ -50,9 +48,32 @@
 					$_SESSION['facebook_access_token'] = (string) $longLivedAccessToken;
 					$fb->setDefaultAccessToken($_SESSION['facebook_access_token']);
 				}
+		try{
 			$request = $fb->get('/me');
+
+			$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location');
+			$profile_response = $profile_request->getGraphNode()->asArray();
+
 			$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
 			$post_request = $fb->post('/me/feed', $post_message);
+
+		} catch(Facebook\Exceptions\FacebookResponseException $e) {
+				// When Graph returns an error
+				echo 'Graph returned an error: ' . $e->getMessage();
+				unset($_SESSION['facebook_access_token']);
+				echo "<script>window.top.location.href='https://apps.facebook.com/'</script>";
+				exit;
+			}
+		/*// connect
+			$m = new MongoClient();
+			// select a database
+			$db = $m->tfg; 
+			// select a collection (analogous to a relational database's table)
+			$collection = $db->users;
+			$document = array( "code" =>"" "name" => "", "surname" => "", "gender" => "", "email" => "", "location" =>"", "hometown" =>"", "qfavorite" =>"", "qrestriction" =>"" , "qalergy" =>"", "qfriend" =>array(), "qfood1" =>array());
+$collection->insert($document);
+			*/
+
 	} else {
 				$helper = $fb->getRedirectLoginHelper();
 				$loginUrl = $helper->getLoginUrl('https://apps.facebook.com/getting_meaty/', $permissions);

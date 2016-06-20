@@ -77,16 +77,11 @@
 				echo 'Facebook SDK returned an error: ' . $e->getMessage();
 				exit;
 			}
-			// getting basic info about user
+			// getting friends of our user
 			try {
-				$profile_request = $fb->get('/me?fields=name,first_name,last_name,email,gender,hometown,location');
-				$profile_response = $profile_request->getGraphNode()->asArray();
 
 				$request_friends = $fb->get('/me/taggable_friends?fields=name,picture&limit=100');
 				$friends = $request_friends->getGraphEdge();
-
-				#$post_message = ['link' => 'https://carpres1.herokuapp.com/'];
-				#$post_request = $fb->post('/me/feed', $post_message);
 
 			} catch(Facebook\Exceptions\FacebookResponseException $e) {
 				// When Graph returns an error
@@ -100,7 +95,7 @@
 				exit;
 			}
 
-			//As the page of friends hasa maximumthis methods gets all the friends in the same array
+			//As the page of friends has a maximumt his methods gets all the friends in the same array
 			if ($fb->next($friends)) {
 				$allFriends = array();
 				$friendsArray = $friends->asArray();
@@ -202,13 +197,13 @@
 
 			<div id='question2' style="display: none" align="center">
 			<p><strong>¿Eres alergico/sufres intolerancia a alguno de estos alimentos?</strong></p>
-			<Input type = 'checkbox' Name ='alergy' value= '1'>Italiana
+			<Input type = 'checkbox' Name ='alergy' value= '1'>Lactosa
 			<br></br>
-			<Input type = 'checkbox' Name ='alergy' value= '2'>Española
+			<Input type = 'checkbox' Name ='alergy' value= '2'>Cereales
 			<br></br>
-			<Input type = 'checkbox' Name ='alergy' value= '3'>Asiática
+			<Input type = 'checkbox' Name ='alergy' value= '3'>Huevos
 			<br></br>
-			<Input type = 'checkbox' Name ='alergy' value= '4'>Comida Rápida
+			<Input type = 'checkbox' Name ='alergy' value= '4'>Otras
 			<br></br>
 			</div>
 			

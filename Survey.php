@@ -24,7 +24,7 @@
 			  'default_graph_version' => 'v2.5',
 			]);
 			$helper = $fb->getCanvasHelper();
-			$permissions = ['email','publish_actions','user_friends','user_hometown','user_location']; // optionnal
+			$permissions = ['email','publish_actions','user_friends','user_hometown','user_location', 'user_birthday']; // optionnal
 			try {
 				if (isset($_SESSION['facebook_access_token'])) {
 				$accessToken = $_SESSION['facebook_access_token'];
